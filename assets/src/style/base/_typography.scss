@@ -1,0 +1,165 @@
+/**
+ * Basic typography style for copy text, MAPS
+ */
+/*
+  @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+    
+      font-size: em($fs-font-size);
+    }
+    @else {
+   */   /* If $fs-font-size is a key that exists in $fs-breakpoints, use the value *//*
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: em($fs-font-size);
+      }
+    }
+  }
+}
+
+*/
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      @include make-font-size($fs-font-size);
+    }
+    @else {
+       /* If $fs-font-size is a key that exists in
+       $fs-breakpoints, use the value */
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        @include make-font-size($fs-font-size);
+      }
+    }
+  }
+}
+/* Utility function for mixin font-size */
+@mixin make-font-size($fs-font-size) {
+  /* If $fs-font-size is a list, include
+  // both font-size and line-height*/
+  @if type-of($fs-font-size) == "list" {
+    font-size: em(nth($fs-font-size, 1));
+    @if (length($fs-font-size) > 1) {
+      line-height: nth($fs-font-size, 2);
+    }
+  }
+  @else {
+    font-size: em($fs-font-size);
+  }
+}
+/* breakpoints */
+$breakpoints: (
+  small : 480px,
+  medium: 700px,
+  large : 1024px
+);
+/*
+Now, what if we want an element to have a font size for a custom breakpoint that doesn’t 
+exist in $breakpoints? In the font-sizes map, simply drop in the breakpoint value instead of a 
+name as the key, and the mixin will do the work for you:
+*/
+$p-text: (
+    null  : 15,
+    small : 15,
+    medium : 16,
+    large: 16
+);
+
+$main-heading: (
+    null  : 28,
+    small : 31,
+    medium : 33,
+    large: (48, 1.7),
+    1440px: (60,1.7)
+);
+$sub-heading: (
+    null  : 18,
+    small : 21,
+    medium : 23,
+    large: 24,
+    1440px: (24,1.7)
+);
+$section-heading: (
+    null  : 18,
+    small : 21,
+    medium : 23,
+    large: 36 
+);
+$section-desc: (
+    null  : 17,
+    small : 18,
+    medium : 19,
+    large: 20   
+);
+$article-heading: (
+    null  : 18,
+    small : 21,
+    medium : 23,
+    large: 24
+);
+$article-works-heading:(
+    null  : 11,
+    small : 12,
+    medium : 13,
+    large: 16
+);
+$form-text:(
+    null  : 11,
+    small : 12,
+    medium : 13,
+    large: 16
+);
+$nav-list--link:(
+    null  : 11,
+    small : 12,
+    medium : 13,
+    large: 16
+);
+
+
+p{
+    @include font-size($p-text);
+}
+h1,h2,h3,h4,h5{
+    line-height: 1.5
+}
+.top-heading{
+	@include font-size($main-heading);
+    color: $light-color;
+}
+.top-sub-heading{
+	@include font-size($sub-heading);
+    color: $light-color;
+}
+.section-heading{
+    @include font-size($section-heading);  
+}
+.section-desc{
+     @include font-size($section-desc);
+     text-transform: uppercase;
+}
+.article-heading{
+     @include font-size($article-heading);
+     text-transform: uppercase;    
+}
+.section-heading-alt{
+    @extend .section-heading;
+    text-transform: uppercase;
+} 
+.article-works-heading{
+     @include font-size($article-works-heading);
+     text-transform: uppercase;
+}  
+.nav-list--link{
+     @include font-size($nav-list--link);
+     text-transform: uppercase;
+    color: $grey-color
+}
+input, select, textarea{
+     @include font-size($form-text);     
+} 

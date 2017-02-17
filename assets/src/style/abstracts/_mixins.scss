@@ -1,0 +1,86 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/* convert pixel to em */
+@function em($pixels, $context: $main-text) {
+  @return #{$pixels/$context}em;
+}
+
+
+/* maps and brealpoint */
+$breakpoints: (
+  null: 0,
+  x-small: 544px,
+  small : 740px,
+  medium: 800px,
+  large : 1024px,
+  xlarge: 1400px
+
+);
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+  /* If $mq-breakpoint is a key that exists in
+     $mq-breakpoints, get and use the value */
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+  }
+  @media screen and (min-width: #{$mq-breakpoint}) {
+    @content;
+  }
+}
+
+/* example usage inline
+.main {
+  width: 100%;
+  @include mq(medium) {
+    width: 60%;
+  }
+  @include mq(large) {
+    width: 70%;
+  }
+}
+*/
+
+
+
+
+
+
+
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+
+
+
+
+
+

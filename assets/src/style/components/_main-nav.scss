@@ -1,0 +1,35 @@
+
+.main-nav{
+	background: rgba(26, 26, 26, 0.6);
+	left: 0;
+	margin:0;
+	padding: 25px 0 20px 0;
+	position: fixed;
+	right: 0;
+	top:0;
+	z-index: 1030;
+	@include mq(medium) {
+		display: block
+	}
+};
+.nav-lists{
+	display: none;
+	@include mq(medium) {
+		display: block
+	}
+}
+.nav-list{
+	display: block;
+	float: right;
+	margin:0;
+	padding: 0;
+	&--link{
+		display: block;
+		padding: 18px 20px 0 20px;
+	}
+}
+.logo{
+	
+}
+
+

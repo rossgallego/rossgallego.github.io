@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+
+$map: (
+	key: value,
+	key2: value2
+);
+
+.foo{
+	content: map-keys($map);
+	content: map-values($map);
+	content: map-has-key($map,"key");
+	content: map-get($map,"key");
+};
+
+/* page color */
+
+$page-colors:(
+		col1: #000,
+		col2: #ccc,
+		col3: #ggg
+	);
+
+@each $temp1, $color in $page-colors{
+	.bbb-#{$temp1}{
+		color: $color;
+	}
+
+}
+

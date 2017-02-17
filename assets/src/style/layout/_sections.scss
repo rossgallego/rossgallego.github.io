@@ -1,0 +1,35 @@
+/* maps and brealpoint */
+$breakpoints: (
+  null: 0,
+  x-small: 544px,
+  small : 740px,
+  medium: 800px,
+  large : 1024px,
+  xlarge: 1400px
+
+);
+
+.section{
+	min-height: 302px;
+	padding-top: 140px;
+	@include mq(xlarge) {
+		min-height: 862px;
+	}
+}
+
+
+
+
+
+.section-services{
+	background: $light-color;
+}
+.section-skills{
+	background: $light-color;
+}
+.section-works{
+	background: $light-color;
+}
+.section-contact{
+	background: $light-color;
+}

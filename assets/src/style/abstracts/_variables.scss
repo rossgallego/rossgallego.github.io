@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/* fonts */
+$open-sans: "Open Sans";
+$roboto: "Roboto";
+
+/* typography */
+$main-text: 16; // Default
+
+/* color */
+$brand-color: rgb(0,204,255);
+$dark-color: rgb(26,26,26);
+$grey-color: rgb(202,202,202);
+$light-color: rgb(252,252,252);
+
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// breakpoints
+// -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+// -----------------------------------------------------------------------------
+// Misc
+// -----------------------------------------------------------------------------
+$breakpoints: (
+  small : 480px,
+  medium: 800px,
+  large : 1024px
+);
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

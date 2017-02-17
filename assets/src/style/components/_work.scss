@@ -1,0 +1,35 @@
+
+.work{
+	@extend %piece-bg;
+	&--pieces{
+		padding-top: em(20)
+	}
+	&--piece{
+	
+		height: 300px;
+		margin: em(5) 0;
+		padding: em(5);
+	}
+}
+
+@include mq(small) {
+	.work{background: brown; 
+		&--piece{
+			background:green;
+		}
+	}
+}
+@include mq(medium) {
+	.work{background: orange;
+		&--piece{
+			background:green;
+		}
+	}
+}
+@include mq(large) {
+	.work{background: brown;
+		&--piece{
+			background:purple;
+		}
+	}
+}
