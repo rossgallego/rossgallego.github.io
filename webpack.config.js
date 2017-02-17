@@ -9,7 +9,7 @@ module.exports = {
 	output:{
 
 	    path: path.resolve(__dirname, "assets/dist/js/script"),
-         publicPath: "/assets/",
+      //  publicPath: "/assets/",
 		filename:"bundle.js"
 	},
 
@@ -34,31 +34,24 @@ plugins: [
 					presets:["es2015"]
 				}
 			},
+			
 			{
 				test: /\.scss$/,
 				loaders: "style-loader!css-loader!sass-loader"
 			},
 
- // { test: /\.jpg$/,    loader: "url-loader?limit=10000&minetype=image/jpg" },
-   //{ test: /\.jpg$/,    loader: "file-loader" },
+//{ test: /\.jpg$/,    loader: "file-loader" },
 
-/*
+ //{ test: /\.jpg$/,    loader: "url-loader?limit=10000&minetype=image/jpg" },
+   //
+
+/**/
 {
   test: /\.(jpe?g|gif|png)$/,
      loader: 'file-loader?emitFile=false&name=[path][name].[ext]'
 },
-*/
 
 
-
-            /** font-awesome */
-     
-           // {test: /\.scss?$/, loaders: ['style', 'css', 'sass']},          
-            {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader?mimetype=image/svg+xml'},
-            {test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader?mimetype=application/font-woff"},
-            {test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader?mimetype=application/font-woff"},
-            {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader?mimetype=application/octet-stream"},
-            {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader"},
 
 
 
