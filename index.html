@@ -87,15 +87,47 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+
+
+
+
 <!-- nav -->
+<!---->
 <nav class="main-nav">
     <div class="container">
-        <div class="col-lg-6">
+        <div class="col-xs-6">
         <div class="logo">
             <img src="assets/src/img/logo.png">
         </div>
         </div>        
-        <div class="col-lg-6">
+        <div class="col-xs-6">
             <ul class="nav-lists">
 
             <li class="nav-list">
@@ -114,9 +146,13 @@
             <a href="" class="nav-list--link" title="hero" >Home</a> 
             </li>
             </ul>
+
+            <span class="nav-responsive" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
         </div> 
     </div>
 </nav>
+
+
 
 
 
@@ -333,5 +369,21 @@
   ga('send', 'pageview');
 
 </script>
+
+
+
+<script type="text/javascript">
+/* Open when someone clicks on the span element */
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+
     </body>
 </html>
