@@ -36,6 +36,7 @@
     "webpack-dev-server": "^2.3.0"
   },
   "dependencies": {
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "jquery-circle-progress": "^1.2.1"
   }
 }
