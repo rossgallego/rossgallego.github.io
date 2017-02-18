@@ -1,0 +1,12 @@
+.section-skills{}
+.skill{
+    margin: 30px auto 75px auto;
+    &-trade{
+        display: block;
+        text-align: center
+    }
+    &-desp{
+        padding-top: 20px
+    }
+
+}
