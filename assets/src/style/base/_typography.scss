@@ -142,6 +142,9 @@ h1,h2,h3,h4,h5{
 .section-desc{
      @include font-size($section-desc);
      text-transform: uppercase;
+     &-alt{
+        text-transform: none;
+     }
 }
 .article-heading{
      @include font-size($article-heading);

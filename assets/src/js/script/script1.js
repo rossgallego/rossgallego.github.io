@@ -31,41 +31,43 @@ $(".skill-layout").circleProgress({
     size: 170,
     fill: {
       gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
-    }
+    },
+    duration: 1200, 
+    easing: "circleProgressEase" 
 });
 $(".skill-js").circleProgress({
     value: 0.75,
     size: 170,
     fill: {
-      gradient: ["red", "orange"]
+      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
     }
 });
 $(".skill-wp").circleProgress({
     value: 0.75,
     size: 170,
     fill: {
-      gradient: ["red", "orange"]
+      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
     }
 });
 $(".skill-version").circleProgress({
     value: 0.75,
     size: 170,
     fill: {
-      gradient: ["red", "orange"]
+      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
     }
 });
 $(".skill-prep").circleProgress({
     value: 0.75,
     size: 170,
     fill: {
-      gradient: ["red", "orange"]
+      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
     }
 });
 $(".skill-graphic").circleProgress({
     value: 0.75,
     size: 170,
     fill: {
-      gradient: ["red", "orange"]
+      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
     }
 });
 
