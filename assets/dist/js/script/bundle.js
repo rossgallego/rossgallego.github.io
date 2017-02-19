@@ -10215,7 +10215,7 @@ module.exports = mm;
 //     $(this).find(".work-item-overlay").addClass("opa1");
 // })
 
-$(".work-item").on("", function () {
+$(".work-item").on("click", function () {
     // $(this).find(".work-item-overlay").css("display","block");
     $(this).find(".work-item-overlay").addClass("opa1");
 });
