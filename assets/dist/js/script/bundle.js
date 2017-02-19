@@ -10202,8 +10202,6 @@ function updateLink(linkElement, obj) {
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 __webpack_require__(6);
 __webpack_require__(25);
 
@@ -10255,65 +10253,72 @@ $(".nav-list--link").on("click", function () {
     return false;
 });
 
-$('.skill-layout').appear(function () {
+// $('.skill-layout').appear(function() {
 
-    skillLayout();
-    // skillJs();
-    // skillWp();
-    // skillVersion();
-    // skillPrer();
-    // skillGraphic();
-});
-$(".skill-js").appear(function () {
+//     skillLayout();
+//     // skillJs();
+//     // skillWp();
+//     // skillVersion();
+//     // skillPrer();
+//     // skillGraphic();
 
-    // skillLayout();
-    skillJs();
-    // skillWp();
-    // skillVersion();
-    // skillPrer();
-    // skillGraphic();
-});
+// });
+// $(".skill-js").appear(function() {
 
-var skillLayout = function skillLayout() {
-    var _$$circleProgress;
+//     // skillLayout();
+//      skillJs();
+//     // skillWp();
+//     // skillVersion();
+//     // skillPrer();
+//     // skillGraphic();
 
-    $(".skill-layout").circleProgress((_$$circleProgress = {
-        value: 0.75,
-        size: 170
-    }, _defineProperty(_$$circleProgress, 'size', 1000), _defineProperty(_$$circleProgress, 'fill', {
-        gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
-    }), _defineProperty(_$$circleProgress, 'duration', 1200), _defineProperty(_$$circleProgress, 'easing', "circleProgressEase"), _$$circleProgress));
-};
-var skillJs = function skillJs() {
-    var _$$circleProgress2;
+// });
 
-    $(".skill-js").circleProgress((_$$circleProgress2 = {
-        value: 0.75,
-        size: 170
-    }, _defineProperty(_$$circleProgress2, 'size', 1000), _defineProperty(_$$circleProgress2, 'fill', {
-        gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
-    }), _defineProperty(_$$circleProgress2, 'duration', 1200), _defineProperty(_$$circleProgress2, 'easing', "circleProgressEase"), _$$circleProgress2));
-};
-var skillWp = function skillWp() {
-    $(".skill-wp").circleProgress({
-        value: 0.75
-    });
-};
-var skillVersion = function skillVersion() {
-    $(".skill-version").circleProgress({
-        value: 0.75
-    });
-};
-var skillPrer = function skillPrer() {
-    $(".skill-prep").circleProgress({
-        value: 0.75
-    });
-};
-var skillGraphic = function skillGraphic() {
-    $(".skill-graphic").circleProgress({
-        value: 0.75
-    });
-};
+// var skillLayout = function(){
+//     $(".skill-layout").circleProgress({
+//         value: 0.75,
+//     size: 170,
+//     size: 1000,
+//     fill: {
+//       gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
+//     },
+//     duration: 1200, 
+//     easing: "circleProgressEase" 
+//     })
+// };
+// var skillJs = function(){
+//   $(".skill-js").circleProgress({
+//       value: 0.75,
+//     size: 170,
+//     size: 1000,
+//     fill: {
+//       gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
+//     },
+//     duration: 1200, 
+//     easing: "circleProgressEase" 
+//     })
+// }
+// var skillWp = function(){
+//   $(".skill-wp").circleProgress({
+//       value: 0.75
+//   });
+// }
+// var skillVersion = function(){
+//   $(".skill-version").circleProgress({
+//       value: 0.75
+//   });
+// }
+// var skillPrer = function(){
+//   $(".skill-prep").circleProgress({
+//       value: 0.75,
+//   })
+// }
+// var skillGraphic = function(){
+//   $(".skill-graphic").circleProgress({
+//       value: 0.75,
+//   });
+// }
+
 
 // el.appear({ force_process: true });
 
