@@ -112,7 +112,7 @@ var skillVersion = function(){
     easing: "circleProgressEase" 
   });
 }
-var skillPrer = function(){
+var skillPrep = function(){
   $(".skill-prep").circleProgress({
       value: 0.75,
     size: 170,
@@ -137,16 +137,22 @@ var skillGraphic = function(){
 
 $('.skill-layout').appear(function() {
   skillLayout();
+  skillJs();
 });
-// $(".skill-js").appear(function() {
-// });
-
+$(".skill-wp").appear(function() {
+skillWp();
+skillVersion();
+});
+$(".skill-prep").appear(function() {
+skillPrep();
+skillGraphic();
+});
 
     // skillLayout();
     // skillJs();
     // skillWp();
     // skillVersion();
-    // skillPrer();
+    // skillPrep();
     // skillGraphic();
 
 
