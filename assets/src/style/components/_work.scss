@@ -21,6 +21,11 @@
             opacity: 1;
         }
     }
+    &:focus{
+        .work-item-overlay{
+            opacity: 1;
+        }
+    }
     &-overlay{
         transition: opacity 0.3s ease;
         height: 100%;
