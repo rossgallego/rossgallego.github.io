@@ -9,13 +9,16 @@ module.exports= mm;
 
 
     $(".work-item").on("click",function(){
-        $(this).find(".work-item-overlay").css("display","block");
+        // $(this).find(".work-item-overlay").css("display","block");
+        $(this).find(".work-item-overlay").addClass("opa1");
     })
     $(".work-item").on("mouseover",function(){
-        $(this).find(".work-item-overlay").css("display","block");
+        // $(this).find(".work-item-overlay").css("display","block");
+        $(this).find(".work-item-overlay").addClass("opa1");
     })
-    $(".work-item").on("mouseout",function(){
-        $(this).find(".work-item-overlay").css("display","none");
+    $(".work-item,.overlay-close").on("mouseout",function(){
+        // $(this).find(".work-item-overlay").css("display","none");
+        $(this).find(".work-item-overlay").removeClass("opa1").addClass("opa0");
     })
 
 

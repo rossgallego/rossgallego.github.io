@@ -21,7 +21,7 @@
     &:hover{
         .work-item-overlay{
             /*opacity: 1;*/
-            
+
         }
     }
     &:focus{
@@ -35,11 +35,11 @@
         }
     }
     &-overlay{
-        display: none;
+        /*display: none;*/
         transition: opacity 0.3s ease;
         height: 100%;
         width: 100%;
-        opacity: 1;
+        opacity: 0;
         position: absolute;
         z-index: 50;
         background: rgba(0,204,255,0.6);
@@ -61,4 +61,11 @@
     }
 }
 
+
+.opa0{
+                opacity: 0;
+}
+.opa1{
+                opacity: 1;
+}
 
