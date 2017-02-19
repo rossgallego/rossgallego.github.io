@@ -10202,8 +10202,6 @@ function updateLink(linkElement, obj) {
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {
 
-var _$$circleProgress;
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 __webpack_require__(6);
@@ -10257,32 +10255,44 @@ $(".nav-list--link").on("click", function () {
     return false;
 });
 
-$('.skill-trade').appear(function () {
+$('.skill-layout').appear(function () {
 
     skillLayout();
+    // skillJs();
+    // skillWp();
+    // skillVersion();
+    // skillPrer();
+    // skillGraphic();
+});
+$(".skill-js").appear(function () {
+
+    // skillLayout();
     skillJs();
-    skillWp();
-    skillVersion();
-    skillPrer();
-    skillGraphic();
+    // skillWp();
+    // skillVersion();
+    // skillPrer();
+    // skillGraphic();
 });
 
-$(".skill-trade").circleProgress((_$$circleProgress = {
-    value: 0.0,
-    size: 170
-}, _defineProperty(_$$circleProgress, 'size', 1000), _defineProperty(_$$circleProgress, 'fill', {
-    gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
-}), _defineProperty(_$$circleProgress, 'duration', 1200), _defineProperty(_$$circleProgress, 'easing', "circleProgressEase"), _$$circleProgress));
-
 var skillLayout = function skillLayout() {
-    $(".skill-layout").circleProgress({
-        value: 0.75
-    });
+    var _$$circleProgress;
+
+    $(".skill-layout").circleProgress((_$$circleProgress = {
+        value: 0.75,
+        size: 170
+    }, _defineProperty(_$$circleProgress, 'size', 1000), _defineProperty(_$$circleProgress, 'fill', {
+        gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
+    }), _defineProperty(_$$circleProgress, 'duration', 1200), _defineProperty(_$$circleProgress, 'easing', "circleProgressEase"), _$$circleProgress));
 };
 var skillJs = function skillJs() {
-    $(".skill-js").circleProgress({
-        value: 0.75
-    });
+    var _$$circleProgress2;
+
+    $(".skill-js").circleProgress((_$$circleProgress2 = {
+        value: 0.75,
+        size: 170
+    }, _defineProperty(_$$circleProgress2, 'size', 1000), _defineProperty(_$$circleProgress2, 'fill', {
+        gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
+    }), _defineProperty(_$$circleProgress2, 'duration', 1200), _defineProperty(_$$circleProgress2, 'easing', "circleProgressEase"), _$$circleProgress2));
 };
 var skillWp = function skillWp() {
     $(".skill-wp").circleProgress({

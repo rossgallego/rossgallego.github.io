@@ -61,21 +61,30 @@ module.exports= mm;
 
 
 
-$('.skill-trade').appear(function() {
+$('.skill-layout').appear(function() {
 
     skillLayout();
-    skillJs();
-    skillWp();
-    skillVersion();
-    skillPrer();
-    skillGraphic();
+    // skillJs();
+    // skillWp();
+    // skillVersion();
+    // skillPrer();
+    // skillGraphic();
+
+});
+$(".skill-js").appear(function() {
+
+    // skillLayout();
+     skillJs();
+    // skillWp();
+    // skillVersion();
+    // skillPrer();
+    // skillGraphic();
 
 });
 
-
-
-$(".skill-trade").circleProgress({
-    value: 0.0,
+var skillLayout = function(){
+    $(".skill-layout").circleProgress({
+        value: 0.75,
     size: 170,
     size: 1000,
     fill: {
@@ -83,17 +92,19 @@ $(".skill-trade").circleProgress({
     },
     duration: 1200, 
     easing: "circleProgressEase" 
-})
-
-var skillLayout = function(){
-    $(".skill-layout").circleProgress({
-        value: 0.75
     })
 };
 var skillJs = function(){
   $(".skill-js").circleProgress({
-      value: 0.75
-  });
+      value: 0.75,
+    size: 170,
+    size: 1000,
+    fill: {
+      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
+    },
+    duration: 1200, 
+    easing: "circleProgressEase" 
+    })
 }
 var skillWp = function(){
   $(".skill-wp").circleProgress({
