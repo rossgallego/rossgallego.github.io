@@ -7,8 +7,16 @@ require('jquery-circle-progress');
 const mm = "it works";
 module.exports= mm;
 
+    $(".work-item").on("tap",function(){
+        $(this).find(".work-item-overlay").addClass("opa1");
+    })
 
-    $(".work-item").on("click",function(){
+    $(document).on("scrollstart",function(){
+      $(".work-item-overlay").removeClass("opa1").addClass("opa0");
+    });  
+
+/*
+    $(".work-item").on("",function(){
         // $(this).find(".work-item-overlay").css("display","block");
         $(this).find(".work-item-overlay").addClass("opa1");
     })
@@ -17,6 +25,7 @@ module.exports= mm;
         e.stopPropagation();
         $(this).closest(".work-item-overlay").removeClass("opa1").addClass("opa0");
     })
+    */
     /*
     $(".work-item").on("mouseover",function(){        // $(this).find(".work-item-overlay").css("display","block");
         $(this).find(".work-item-overlay").addClass("opa1");

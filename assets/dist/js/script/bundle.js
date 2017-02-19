@@ -10211,15 +10211,25 @@ __webpack_require__(22);
 var mm = "it works";
 module.exports = mm;
 
-$(".work-item").on("click", function () {
-    // $(this).find(".work-item-overlay").css("display","block");
+$(".work-item").on("tap", function () {
     $(this).find(".work-item-overlay").addClass("opa1");
 });
-$(".overlay-close").on("click", function (e) {
-    // $(this).find(".work-item-overlay").css("display","block");
-    e.stopPropagation();
-    $(this).closest(".work-item-overlay").removeClass("opa1").addClass("opa0");
+
+$(document).on("scrollstart", function () {
+    $(".work-item-overlay").removeClass("opa1").addClass("opa0");
 });
+
+/*
+    $(".work-item").on("",function(){
+        // $(this).find(".work-item-overlay").css("display","block");
+        $(this).find(".work-item-overlay").addClass("opa1");
+    })
+    $(".overlay-close").on("click",function(e){
+        // $(this).find(".work-item-overlay").css("display","block");
+        e.stopPropagation();
+        $(this).closest(".work-item-overlay").removeClass("opa1").addClass("opa0");
+    })
+    */
 /*
 $(".work-item").on("mouseover",function(){        // $(this).find(".work-item-overlay").css("display","block");
     $(this).find(".work-item-overlay").addClass("opa1");
