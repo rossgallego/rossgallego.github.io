@@ -12,7 +12,7 @@ module.exports= mm;
     })
 
     $(document).on("scrollstart",function(){
-      $(".work-item-overlay").removeClass("opa1").addClass("opa0");
+     // $(".work-item-overlay").removeClass("opa1").addClass("opa0");
     });  
 
 /*
