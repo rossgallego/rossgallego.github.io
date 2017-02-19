@@ -12,19 +12,19 @@ module.exports= mm;
         // $(this).find(".work-item-overlay").css("display","block");
         $(this).find(".work-item-overlay").addClass("opa1");
     })
-    $(".overlay-close").on("click",function(){
+    $(".overlay-close").on("click",function(e){
         // $(this).find(".work-item-overlay").css("display","block");
+        e.stopPropagation();
         $(this).closest(".work-item-overlay").removeClass("opa1").addClass("opa0");
     })
-    $(".work-item").on("mouseover",function(){
-        // $(this).find(".work-item-overlay").css("display","block");
+    /*
+    $(".work-item").on("mouseover",function(){        // $(this).find(".work-item-overlay").css("display","block");
         $(this).find(".work-item-overlay").addClass("opa1");
     })
     $(".work-item,.overlay-close").on("mouseout",function(){
-        // $(this).find(".work-item-overlay").css("display","none");
         $(this).find(".work-item-overlay").removeClass("opa1").addClass("opa0");
     })
-
+*/
 
 
 
