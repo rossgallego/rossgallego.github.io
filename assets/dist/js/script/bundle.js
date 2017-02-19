@@ -10216,7 +10216,7 @@ $(".work-item").on("tap", function () {
 });
 
 $(document).on("scrollstart", function () {
-    $(".work-item-overlay").removeClass("opa1").addClass("opa0");
+    // $(".work-item-overlay").removeClass("opa1").addClass("opa0");
 });
 
 /*
