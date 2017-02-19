@@ -8,6 +8,19 @@ const mm = "it works";
 module.exports= mm;
 
 
+    $(".work-item").on("click",function(){
+        $(this).find(".work-item-overlay").css("display","block");
+    })
+    $(".work-item").on("mouseover",function(){
+        $(this).find(".work-item-overlay").css("display","block");
+    })
+    $(".work-item").on("mouseout",function(){
+        $(this).find(".work-item-overlay").css("display","none");
+    })
+
+
+
+
     $(".slideLeft").click(function(){
         $(".cbp-spmenu-left").toggleClass("cbp-spmenu-open")
     })
