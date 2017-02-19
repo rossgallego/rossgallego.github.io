@@ -26,6 +26,11 @@
             opacity: 1;
         }
     }
+    &:active{
+        .work-item-overlay{
+            opacity: 1;
+        }
+    }
     &-overlay{
         transition: opacity 0.3s ease;
         height: 100%;
