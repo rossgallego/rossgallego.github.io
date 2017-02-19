@@ -10214,7 +10214,7 @@ var mm = "it works";
 module.exports = mm;
 
 $(".work-item").on("tap", function () {
-    $(this).find(".work-item-overlay").addClass("opa1");
+  $(this).find(".work-item-overlay").addClass("opa1");
 });
 
 /*
@@ -10238,7 +10238,7 @@ $(".work-item,.overlay-close").on("mouseout",function(){
 */
 
 $(".slideLeft").click(function () {
-    $(".cbp-spmenu-left").toggleClass("cbp-spmenu-open");
+  $(".cbp-spmenu-left").toggleClass("cbp-spmenu-open");
 });
 /*
    $("#nav-top").on("click", function(){
@@ -10248,76 +10248,92 @@ $(".slideLeft").click(function () {
    */
 
 $(".nav-list--link").on("click", function () {
-    var thislink = "#" + $(this).attr("title");
-    $("html body").animate({ "scrollTop": $(thislink).offset().top }, 1000);
-    return false;
+  var thislink = "#" + $(this).attr("title");
+  $("body,html").animate({ "scrollTop": $(thislink).offset().top }, 1000);
+  return false;
 });
 
-// $('.skill-layout').appear(function() {
+var skillLayout = function skillLayout() {
+  $(".skill-layout").circleProgress({
+    value: 0.75,
+    size: 170,
+    // size: 1000,
+    fill: {
+      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
+    },
+    duration: 1200,
+    easing: "circleProgressEase"
+  });
+};
+var skillJs = function skillJs() {
+  $(".skill-js").circleProgress({
+    value: 0.75,
+    size: 170,
+    fill: {
+      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
+    },
+    duration: 1200,
+    easing: "circleProgressEase"
+  });
+};
+var skillWp = function skillWp() {
+  $(".skill-wp").circleProgress({
+    value: 0.75,
+    size: 170,
+    fill: {
+      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
+    },
+    duration: 1200,
+    easing: "circleProgressEase"
+  });
+};
+var skillVersion = function skillVersion() {
+  $(".skill-version").circleProgress({
+    value: 0.75,
+    size: 170,
+    fill: {
+      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
+    },
+    duration: 1200,
+    easing: "circleProgressEase"
+  });
+};
+var skillPrer = function skillPrer() {
+  $(".skill-prep").circleProgress({
+    value: 0.75,
+    size: 170,
+    fill: {
+      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
+    },
+    duration: 1200,
+    easing: "circleProgressEase"
+  });
+};
+var skillGraphic = function skillGraphic() {
+  $(".skill-graphic").circleProgress({
+    value: 0.75,
+    size: 170,
+    fill: {
+      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
+    },
+    duration: 1200,
+    easing: "circleProgressEase"
+  });
+};
 
-//     skillLayout();
-//     // skillJs();
-//     // skillWp();
-//     // skillVersion();
-//     // skillPrer();
-//     // skillGraphic();
-
-// });
+$('.skill-layout').appear(function () {
+  skillLayout();
+});
 // $(".skill-js").appear(function() {
-
-//     // skillLayout();
-//      skillJs();
-//     // skillWp();
-//     // skillVersion();
-//     // skillPrer();
-//     // skillGraphic();
-
 // });
 
-// var skillLayout = function(){
-//     $(".skill-layout").circleProgress({
-//         value: 0.75,
-//     size: 170,
-//     size: 1000,
-//     fill: {
-//       gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
-//     },
-//     duration: 1200, 
-//     easing: "circleProgressEase" 
-//     })
-// };
-// var skillJs = function(){
-//   $(".skill-js").circleProgress({
-//       value: 0.75,
-//     size: 170,
-//     size: 1000,
-//     fill: {
-//       gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
-//     },
-//     duration: 1200, 
-//     easing: "circleProgressEase" 
-//     })
-// }
-// var skillWp = function(){
-//   $(".skill-wp").circleProgress({
-//       value: 0.75
-//   });
-// }
-// var skillVersion = function(){
-//   $(".skill-version").circleProgress({
-//       value: 0.75
-//   });
-// }
-// var skillPrer = function(){
-//   $(".skill-prep").circleProgress({
-//       value: 0.75,
-//   })
-// }
-// var skillGraphic = function(){
-//   $(".skill-graphic").circleProgress({
-//       value: 0.75,
-//   });
-// }
+
+// skillLayout();
+// skillJs();
+// skillWp();
+// skillVersion();
+// skillPrer();
+// skillGraphic();
 
 
 // el.appear({ force_process: true });

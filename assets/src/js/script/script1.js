@@ -50,7 +50,7 @@ module.exports= mm;
 	
    $(".nav-list--link").on("click", function(){
         var thislink = "#" + $(this).attr("title");
-        $("html body").animate({"scrollTop":$(thislink).offset().top},1000);
+        $("body,html").animate({"scrollTop":$(thislink).offset().top},1000);
         return false;
    });
 
@@ -61,74 +61,93 @@ module.exports= mm;
 
 
 
-// $('.skill-layout').appear(function() {
 
-//     skillLayout();
-//     // skillJs();
-//     // skillWp();
-//     // skillVersion();
-//     // skillPrer();
-//     // skillGraphic();
 
-// });
+
+
+
+
+var skillLayout = function(){
+    $(".skill-layout").circleProgress({
+        value: 0.75,
+    size: 170,
+    // size: 1000,
+    fill: {
+      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
+    },
+    duration: 1200, 
+    easing: "circleProgressEase" 
+    })
+};
+var skillJs = function(){
+  $(".skill-js").circleProgress({
+      value: 0.75,
+    size: 170,
+    fill: {
+      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
+    },
+    duration: 1200, 
+    easing: "circleProgressEase" 
+    })
+}
+var skillWp = function(){
+  $(".skill-wp").circleProgress({
+      value: 0.75,
+    size: 170,
+    fill: {
+      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
+    },
+    duration: 1200, 
+    easing: "circleProgressEase" 
+  });
+}
+var skillVersion = function(){
+  $(".skill-version").circleProgress({
+      value: 0.75,
+    size: 170,
+    fill: {
+      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
+    },
+    duration: 1200, 
+    easing: "circleProgressEase" 
+  });
+}
+var skillPrer = function(){
+  $(".skill-prep").circleProgress({
+      value: 0.75,
+    size: 170,
+    fill: {
+      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
+    },
+    duration: 1200, 
+    easing: "circleProgressEase" 
+  })
+}
+var skillGraphic = function(){
+  $(".skill-graphic").circleProgress({
+      value: 0.75,
+    size: 170,
+    fill: {
+      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
+    },
+    duration: 1200, 
+    easing: "circleProgressEase" 
+  });
+}
+
+$('.skill-layout').appear(function() {
+  skillLayout();
+});
 // $(".skill-js").appear(function() {
-
-//     // skillLayout();
-//      skillJs();
-//     // skillWp();
-//     // skillVersion();
-//     // skillPrer();
-//     // skillGraphic();
-
 // });
 
-// var skillLayout = function(){
-//     $(".skill-layout").circleProgress({
-//         value: 0.75,
-//     size: 170,
-//     size: 1000,
-//     fill: {
-//       gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
-//     },
-//     duration: 1200, 
-//     easing: "circleProgressEase" 
-//     })
-// };
-// var skillJs = function(){
-//   $(".skill-js").circleProgress({
-//       value: 0.75,
-//     size: 170,
-//     size: 1000,
-//     fill: {
-//       gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
-//     },
-//     duration: 1200, 
-//     easing: "circleProgressEase" 
-//     })
-// }
-// var skillWp = function(){
-//   $(".skill-wp").circleProgress({
-//       value: 0.75
-//   });
-// }
-// var skillVersion = function(){
-//   $(".skill-version").circleProgress({
-//       value: 0.75
-//   });
-// }
-// var skillPrer = function(){
-//   $(".skill-prep").circleProgress({
-//       value: 0.75,
-//   })
-// }
-// var skillGraphic = function(){
-//   $(".skill-graphic").circleProgress({
-//       value: 0.75,
-//   });
-// }
 
-
-
+    // skillLayout();
+    // skillJs();
+    // skillWp();
+    // skillVersion();
+    // skillPrer();
+    // skillGraphic();
 
 
 
