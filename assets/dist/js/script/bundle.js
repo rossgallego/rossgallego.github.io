@@ -10211,12 +10211,7 @@ __webpack_require__(22);
 var mm = "it works";
 module.exports = mm;
 
-// $(".work-item").on("tap",function(){
-//     $(this).find(".work-item-overlay").addClass("opa1");
-// })
-
-$(".work-item").on("click", function () {
-    // $(this).find(".work-item-overlay").css("display","block");
+$(".work-item").on("tap", function () {
     $(this).find(".work-item-overlay").addClass("opa1");
 });
 
