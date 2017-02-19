@@ -1,6 +1,7 @@
 .section-skills{}
 .skill{
-    margin: 30px auto 75px auto;
+    margin: 30px auto;
+    padding: 20px; 
     &-trade{
         display: block;
         text-align: center
@@ -9,4 +10,8 @@
         padding-top: 20px
     }
 
+}
+.skill-trade canvas {
+    max-width: 100%;
+    max-height: 100%;
 }

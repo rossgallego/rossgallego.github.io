@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 25);
+/******/ 	return __webpack_require__(__webpack_require__.s = 26);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10202,10 +10202,16 @@ function updateLink(linkElement, obj) {
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {
 
-__webpack_require__(6);
-__webpack_require__(24);
+var _$$circleProgress;
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+__webpack_require__(6);
+__webpack_require__(25);
+
+__webpack_require__(23);
 __webpack_require__(22);
+
 //alert(m);
 
 var mm = "it works";
@@ -10251,50 +10257,63 @@ $(".nav-list--link").on("click", function () {
     return false;
 });
 
-$(".skill-layout").circleProgress({
-    value: 0.75,
-    size: 170,
-    fill: {
-        gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
-    },
-    duration: 1200,
-    easing: "circleProgressEase"
+$('.skill-trade').appear(function () {
+
+    skillLayout();
+    skillJs();
+    skillWp();
+    skillVersion();
+    skillPrer();
+    skillGraphic();
 });
-$(".skill-js").circleProgress({
-    value: 0.75,
-    size: 170,
-    fill: {
-        gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
-    }
-});
-$(".skill-wp").circleProgress({
-    value: 0.75,
-    size: 170,
-    fill: {
-        gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
-    }
-});
-$(".skill-version").circleProgress({
-    value: 0.75,
-    size: 170,
-    fill: {
-        gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
-    }
-});
-$(".skill-prep").circleProgress({
-    value: 0.75,
-    size: 170,
-    fill: {
-        gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
-    }
-});
-$(".skill-graphic").circleProgress({
-    value: 0.75,
-    size: 170,
-    fill: {
-        gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
-    }
-});
+
+$(".skill-trade").circleProgress((_$$circleProgress = {
+    value: 0.0,
+    size: 170
+}, _defineProperty(_$$circleProgress, 'size', 1000), _defineProperty(_$$circleProgress, 'fill', {
+    gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
+}), _defineProperty(_$$circleProgress, 'duration', 1200), _defineProperty(_$$circleProgress, 'easing', "circleProgressEase"), _$$circleProgress));
+
+var skillLayout = function skillLayout() {
+    $(".skill-layout").circleProgress({
+        value: 0.75
+    });
+};
+var skillJs = function skillJs() {
+    $(".skill-js").circleProgress({
+        value: 0.75
+    });
+};
+var skillWp = function skillWp() {
+    $(".skill-wp").circleProgress({
+        value: 0.75
+    });
+};
+var skillVersion = function skillVersion() {
+    $(".skill-version").circleProgress({
+        value: 0.75
+    });
+};
+var skillPrer = function skillPrer() {
+    $(".skill-prep").circleProgress({
+        value: 0.75
+    });
+};
+var skillGraphic = function skillGraphic() {
+    $(".skill-graphic").circleProgress({
+        value: 0.75
+    });
+};
+
+// el.appear({ force_process: true });
+
+// el.on('appear', function() {
+//   if (!inited) {
+//     el.circleProgress({ value: 0.7 });
+//     inited = true;
+//   }
+// });
+
 
 /*
 $(function(){
@@ -10350,7 +10369,7 @@ $(".x").click(function(e){
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports.css = __webpack_require__ (23);
+module.exports.css = __webpack_require__ (24);
 module.exports.js = __webpack_require__ (5);
 
 
@@ -12835,7 +12854,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Ope
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900);", ""]);
 
 // module
-exports.push([module.i, "@charset \"UTF-8\";\n/* fonts */\n/* typography */\n/* color */\n/* convert pixel to em */\n/* maps and brealpoint */\n/* example usage inline\n.main {\n  width: 100%;\n  @include mq(medium) {\n    width: 60%;\n  }\n  @include mq(large) {\n    width: 70%;\n  }\n}\n*/\n/* bootstrap override  and default */\nhtml {\n  box-sizing: border-box;\n  font-size: 100%; }\n\nbody {\n  font-size: 1em;\n  line-height: 1.5; }\n\nh1, h2, h3, h4, h5 {\n  line-height: 1.5; }\n\nul, li {\n  margin: 0;\n  padding: 0;\n  list-style: none; }\n\n/**\n * Make all elements from the DOM inherit from the parent box-sizing\n * Since `*` has a specificity of 0, it does not override the `html` value\n * making all elements inheriting from the root box-sizing value\n * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/\n */\n*, *::before, *::after {\n  box-sizing: inherit; }\n\n/**\n * Basic styles for links\n */\na {\n  /*color: $brand-color; */\n  text-decoration: none; }\n  a:hover, a:active, a:focus {\n    /* color: $text-color; */\n    text-decoration: underline; }\n\n/*\nlight:300, regular:400, semi-bolf:600,bold:700,extra-bold:800;\n*/\n/*\nthin:100,light:300,regular:400,medium:500,bold:700,black:900;\n*/\np {\n  font-family: \"Roboto\";\n  font-weight: 300; }\n\na {\n  font-family: \"Roboto\";\n  font-weight: 400; }\n\nh1 {\n  font-family: \"Roboto\";\n  font-weight: 700; }\n\nh2 {\n  font-family: \"Open Sans\";\n  font-weight: 300; }\n\nh3 {\n  font-family: \"Open Sans\";\n  font-weight: 300; }\n\nh4 {\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 700; }\n\nh5 {\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 400; }\n\ninput, select, textarea {\n  font-family: \"Open Sans\";\n  font-weight: 300; }\n\n/**\n * Basic typography style for copy text, MAPS\n */\n/*\n  @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {\n  @each $fs-breakpoint, $fs-font-size in $fs-map {\n    @if $fs-breakpoint == null {\n    \n      font-size: em($fs-font-size);\n    }\n    @else {\n   */\n/* If $fs-font-size is a key that exists in $fs-breakpoints, use the value */\n/*\n      @if map-has-key($fs-breakpoints, $fs-breakpoint) {\n        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);\n      }\n      @media screen and (min-width: $fs-breakpoint) {\n        font-size: em($fs-font-size);\n      }\n    }\n  }\n}\n\n*/\n/* Utility function for mixin font-size */\n/* breakpoints */\n/*\nNow, what if we want an element to have a font size for a custom breakpoint that doesn’t \nexist in $breakpoints? In the font-sizes map, simply drop in the breakpoint value instead of a \nname as the key, and the mixin will do the work for you:\n*/\np {\n  /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n  font-size: 0.9375em;\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */ }\n  @media screen and (min-width: 480px) {\n    p {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 0.9375em; } }\n  @media screen and (min-width: 700px) {\n    p {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1em; } }\n  @media screen and (min-width: 1024px) {\n    p {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1em; } }\n\nh1, h2, h3, h4, h5 {\n  line-height: 1.5; }\n\n.top-heading {\n  /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n  font-size: 1.75em;\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  color: #fcfcfc; }\n  @media screen and (min-width: 480px) {\n    .top-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.9375em; } }\n  @media screen and (min-width: 700px) {\n    .top-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 2.0625em; } }\n  @media screen and (min-width: 1024px) {\n    .top-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 3em;\n      line-height: 1.7; } }\n  @media screen and (min-width: 1440px) {\n    .top-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 3.75em;\n      line-height: 1.7; } }\n\n.top-sub-heading {\n  /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n  font-size: 1.125em;\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  color: #fcfcfc; }\n  @media screen and (min-width: 480px) {\n    .top-sub-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.3125em; } }\n  @media screen and (min-width: 700px) {\n    .top-sub-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.4375em; } }\n  @media screen and (min-width: 1024px) {\n    .top-sub-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.5em; } }\n  @media screen and (min-width: 1440px) {\n    .top-sub-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.5em;\n      line-height: 1.7; } }\n\n.section-heading, .section-heading-alt {\n  /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n  font-size: 1.125em;\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */ }\n  @media screen and (min-width: 480px) {\n    .section-heading, .section-heading-alt {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.3125em; } }\n  @media screen and (min-width: 700px) {\n    .section-heading, .section-heading-alt {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.4375em; } }\n  @media screen and (min-width: 1024px) {\n    .section-heading, .section-heading-alt {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 2.25em; } }\n\n.section-desc {\n  /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n  font-size: 1.0625em;\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  text-transform: uppercase; }\n  @media screen and (min-width: 480px) {\n    .section-desc {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.125em; } }\n  @media screen and (min-width: 700px) {\n    .section-desc {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.1875em; } }\n  @media screen and (min-width: 1024px) {\n    .section-desc {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.25em; } }\n  .section-desc-alt {\n    text-transform: none; }\n\n.article-heading {\n  /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n  font-size: 1.125em;\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  text-transform: uppercase; }\n  @media screen and (min-width: 480px) {\n    .article-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.3125em; } }\n  @media screen and (min-width: 700px) {\n    .article-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.4375em; } }\n  @media screen and (min-width: 1024px) {\n    .article-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.5em; } }\n\n.section-heading-alt {\n  text-transform: uppercase; }\n\n.article-works-heading {\n  /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n  font-size: 0.6875em;\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  text-transform: uppercase; }\n  @media screen and (min-width: 480px) {\n    .article-works-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 0.75em; } }\n  @media screen and (min-width: 700px) {\n    .article-works-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 0.8125em; } }\n  @media screen and (min-width: 1024px) {\n    .article-works-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1em; } }\n\n.nav-list--link {\n  /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n  font-size: 0.6875em;\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  text-transform: uppercase;\n  color: #e5e5e5; }\n  @media screen and (min-width: 480px) {\n    .nav-list--link {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 0.75em; } }\n  @media screen and (min-width: 700px) {\n    .nav-list--link {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 0.8125em; } }\n  @media screen and (min-width: 1024px) {\n    .nav-list--link {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1em; } }\n\ninput, select, textarea {\n  /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n  font-size: 0.6875em;\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */ }\n  @media screen and (min-width: 480px) {\n    input, select, textarea {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 0.75em; } }\n  @media screen and (min-width: 700px) {\n    input, select, textarea {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 0.8125em; } }\n  @media screen and (min-width: 1024px) {\n    input, select, textarea {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1em; } }\n\n/**\n * Clear inner floats\n */\n.clearfix::after {\n  clear: both;\n  content: '';\n  display: table; }\n\n/**\n * Main content containers\n * 1. Make the container full-width with a maximum width\n * 2. Center it in the viewport\n * 3. Leave some space on the edges, especially valuable on small screens\n */\n.container {\n  max-width: 1180px;\n  /* 1 */\n  margin-left: auto;\n  /* 2 */\n  margin-right: auto;\n  /* 2 */\n  padding-left: 20px;\n  /* 3 */\n  padding-right: 20px;\n  /* 3 */\n  width: 100%;\n  /* 1 */ }\n\n/**\n * Hide text while making it readable for screen readers\n * 1. Needed in WebKit-based browsers because of an implementation bug;\n *    See: https://code.google.com/p/chromium/issues/detail?id=457146\n */\n.hide-text {\n  overflow: hidden;\n  padding: 0;\n  /* 1 */\n  text-indent: 101%;\n  white-space: nowrap; }\n\n/**\n * Hide element while making it readable for screen readers\n * Shamelessly borrowed from HTML5Boilerplate:\n * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133\n */\n.visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px; }\n\n.footer--content {\n  height: 100px;\n  background: #fff000;\n  margin-top: 30px; }\n\n/* maps and brealpoint */\n.section {\n  min-height: 302px;\n  padding-top: 140px;\n  /* If $mq-breakpoint is a key that exists in\n     $mq-breakpoints, get and use the value */ }\n  @media screen and (min-width: 1400px) {\n    .section {\n      min-height: 862px; } }\n\n.section-services {\n  background: #fcfcfc; }\n\n.section-skills {\n  background: #fcfcfc; }\n\n.section-works {\n  background: #fcfcfc; }\n\n.section-contact {\n  background: #fcfcfc; }\n\n.button, .work-item-link {\n  padding: 0.9375rem 1.5625rem;\n  transition: all 0.3s ease;\n  color: #fff;\n  cursor: pointer;\n  border: 2px solid #fff;\n  border: 2px solid rgba(255, 255, 255, 0.5);\n  background: transparent; }\n\n.work-item {\n  clear: both;\n  display: block;\n  height: 100%;\n  width: 100%;\n  margin-bottom: 0.625rem;\n  position: relative;\n  z-index: 900;\n  overflow: hidden;\n  cursor: pointer; }\n  .work-item:hover .work-item-overlay {\n    opacity: 1; }\n  .work-item-overlay {\n    /*display: none;*/\n    transition: opacity 0.5s ease;\n    height: 100%;\n    width: 100%;\n    opacity: 0;\n    position: absolute;\n    z-index: 50;\n    background: rgba(0, 204, 255, 0.6); }\n  .work-item-thumb {\n    filter: grayscale(100%);\n    display: block;\n    overflow: hidden;\n    width: 100%;\n    height: auto; }\n  .work-item-link {\n    margin: -1.625rem 0 0 -4.4375rem;\n    position: absolute;\n    z-index: 100;\n    top: 50%;\n    left: 50%; }\n\n.opa0 {\n  opacity: 0; }\n\n.opa1 {\n  opacity: 1; }\n\n.skill {\n  margin: 30px auto 75px auto; }\n  .skill-trade {\n    display: block;\n    text-align: center; }\n  .skill-desp {\n    padding-top: 20px; }\n\n.section-hero {\n  /*background: url(\"/Users/ross/Documents/projects-ross/rossgallego.github.io/assets/src/img/rg-hero.jpg\");*/\n  /*\t background: url(\"../../assets/src/img/rg-hero.jpg\");*/\n  background: url(" + __webpack_require__(21) + ");\n  background-size: cover;\n  background-repeat: no-repeat; }\n\n.top-heading {\n  /* If $mq-breakpoint is a key that exists in\n     $mq-breakpoints, get and use the value */ }\n  @media screen and (min-width: 1400px) {\n    .top-heading {\n      padding-top: 130px; } }\n\n.main-nav {\n  background: rgba(26, 26, 26, 0.6);\n  left: 0;\n  margin: 0;\n  padding: 25px 0 20px 0;\n  position: fixed;\n  right: 0;\n  top: 0;\n  z-index: 1030;\n  /* If $mq-breakpoint is a key that exists in\n     $mq-breakpoints, get and use the value */ }\n  @media screen and (min-width: 800px) {\n    .main-nav {\n      display: block; } }\n\n.nav-lists {\n  display: none;\n  /* If $mq-breakpoint is a key that exists in\n     $mq-breakpoints, get and use the value */ }\n  @media screen and (min-width: 800px) {\n    .nav-lists {\n      display: block; } }\n\n.nav-list {\n  display: block;\n  float: right;\n  margin: 0;\n  padding: 0; }\n  .nav-list--link {\n    display: block;\n    padding: 18px 20px 0 20px; }\n\n.nav-responsive {\n  display: block;\n  color: #fcfcfc;\n  float: right;\n  /* If $mq-breakpoint is a key that exists in\n     $mq-breakpoints, get and use the value */ }\n  @media screen and (min-width: 800px) {\n    .nav-responsive {\n      display: none; } }\n\n/* responsive */\n/* The Overlay (background) */\n.overlay {\n  /* Height & width depends on how you want to reveal the overlay (see JS below) */\n  height: 100%;\n  width: 0;\n  position: fixed;\n  /* Stay in place */\n  z-index: 1;\n  /* Sit on top */\n  left: 0;\n  top: 0;\n  background-color: black;\n  /* Black fallback color */\n  background-color: rgba(0, 0, 0, 0.9);\n  /* Black w/opacity */\n  overflow-x: hidden;\n  /* Disable horizontal scroll */\n  transition: 0.5s;\n  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */\n  z-index: 9998; }\n\n/* Position the content inside the overlay */\n.overlay-content {\n  position: relative;\n  top: 25%;\n  /* 25% from the top */\n  width: 100%;\n  /* 100% width */\n  text-align: center;\n  /* Centered text/links */\n  margin-top: 30px;\n  /* 30px top margin to avoid conflict with the close button on smaller screens */ }\n\n/* The navigation links inside the overlay */\n.overlay a {\n  padding: 8px;\n  text-decoration: none;\n  font-size: 36px;\n  color: #818181;\n  display: block;\n  /* Display block instead of inline */\n  transition: 0.3s;\n  /* Transition effects on hover (color) */ }\n\n/* When you mouse over the navigation links, change their color */\n.overlay a:hover, .overlay a:focus {\n  color: #f1f1f1; }\n\n/* Position the close button (top right corner) */\n.overlay .closebtn {\n  position: absolute;\n  top: 20px;\n  right: 45px;\n  font-size: 60px;\n  z-index: 9999; }\n\n/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */\n@media screen and (max-height: 450px) {\n  .overlay a {\n    font-size: 20px; }\n  .overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px; } }\n\n.contact-form {\n  padding: 45px 0; }\n\n.contact-input {\n  background: #f1f1f1;\n  border: 0 none;\n  color: #1a1a1a;\n  padding: 10px 20px;\n  margin-bottom: 10px;\n  width: 100%; }\n  .contact-input:focus {\n    border: 0 none; }\n\n.contact-text-area {\n  background: #f1f1f1;\n  border: 0 none;\n  color: #1a1a1a;\n  padding: 10px 20px;\n  margin-bottom: 10px;\n  width: 100%; }\n  .contact-text-area:focus {\n    border: 0 none; }\n\n.contact-btn {\n  background: #f1f1f1;\n  border: 0 none;\n  color: #1a1a1a;\n  display: block;\n  float: right;\n  padding: 10px 20px;\n  text-align: center;\n  width: 25%; }\n\n.foo {\n  content: key, key2;\n  content: value, value2;\n  content: true;\n  content: value; }\n\n/* page color */\n.bbb-col1 {\n  color: #000; }\n\n.bbb-col2 {\n  color: #ccc; }\n\n.bbb-col3 {\n  color: #ggg; }\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\n/* fonts */\n/* typography */\n/* color */\n/* convert pixel to em */\n/* maps and brealpoint */\n/* example usage inline\n.main {\n  width: 100%;\n  @include mq(medium) {\n    width: 60%;\n  }\n  @include mq(large) {\n    width: 70%;\n  }\n}\n*/\n/* bootstrap override  and default */\nhtml {\n  box-sizing: border-box;\n  font-size: 100%; }\n\nbody {\n  font-size: 1em;\n  line-height: 1.5; }\n\nh1, h2, h3, h4, h5 {\n  line-height: 1.5; }\n\nul, li {\n  margin: 0;\n  padding: 0;\n  list-style: none; }\n\n/**\n * Make all elements from the DOM inherit from the parent box-sizing\n * Since `*` has a specificity of 0, it does not override the `html` value\n * making all elements inheriting from the root box-sizing value\n * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/\n */\n*, *::before, *::after {\n  box-sizing: inherit; }\n\n/**\n * Basic styles for links\n */\na {\n  /*color: $brand-color; */\n  text-decoration: none; }\n  a:hover, a:active, a:focus {\n    /* color: $text-color; */\n    text-decoration: underline; }\n\n/*\nlight:300, regular:400, semi-bolf:600,bold:700,extra-bold:800;\n*/\n/*\nthin:100,light:300,regular:400,medium:500,bold:700,black:900;\n*/\np {\n  font-family: \"Roboto\";\n  font-weight: 300; }\n\na {\n  font-family: \"Roboto\";\n  font-weight: 400; }\n\nh1 {\n  font-family: \"Roboto\";\n  font-weight: 700; }\n\nh2 {\n  font-family: \"Open Sans\";\n  font-weight: 300; }\n\nh3 {\n  font-family: \"Open Sans\";\n  font-weight: 300; }\n\nh4 {\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 700; }\n\nh5 {\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 400; }\n\ninput, select, textarea {\n  font-family: \"Open Sans\";\n  font-weight: 300; }\n\n/**\n * Basic typography style for copy text, MAPS\n */\n/*\n  @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {\n  @each $fs-breakpoint, $fs-font-size in $fs-map {\n    @if $fs-breakpoint == null {\n    \n      font-size: em($fs-font-size);\n    }\n    @else {\n   */\n/* If $fs-font-size is a key that exists in $fs-breakpoints, use the value */\n/*\n      @if map-has-key($fs-breakpoints, $fs-breakpoint) {\n        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);\n      }\n      @media screen and (min-width: $fs-breakpoint) {\n        font-size: em($fs-font-size);\n      }\n    }\n  }\n}\n\n*/\n/* Utility function for mixin font-size */\n/* breakpoints */\n/*\nNow, what if we want an element to have a font size for a custom breakpoint that doesn’t \nexist in $breakpoints? In the font-sizes map, simply drop in the breakpoint value instead of a \nname as the key, and the mixin will do the work for you:\n*/\np {\n  /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n  font-size: 0.9375em;\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */ }\n  @media screen and (min-width: 480px) {\n    p {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 0.9375em; } }\n  @media screen and (min-width: 700px) {\n    p {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1em; } }\n  @media screen and (min-width: 1024px) {\n    p {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1em; } }\n\nh1, h2, h3, h4, h5 {\n  line-height: 1.5; }\n\n.top-heading {\n  /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n  font-size: 1.75em;\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  color: #fcfcfc; }\n  @media screen and (min-width: 480px) {\n    .top-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.9375em; } }\n  @media screen and (min-width: 700px) {\n    .top-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 2.0625em; } }\n  @media screen and (min-width: 1024px) {\n    .top-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 3em;\n      line-height: 1.7; } }\n  @media screen and (min-width: 1440px) {\n    .top-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 3.75em;\n      line-height: 1.7; } }\n\n.top-sub-heading {\n  /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n  font-size: 1.125em;\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  color: #fcfcfc; }\n  @media screen and (min-width: 480px) {\n    .top-sub-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.3125em; } }\n  @media screen and (min-width: 700px) {\n    .top-sub-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.4375em; } }\n  @media screen and (min-width: 1024px) {\n    .top-sub-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.5em; } }\n  @media screen and (min-width: 1440px) {\n    .top-sub-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.5em;\n      line-height: 1.7; } }\n\n.section-heading, .section-heading-alt {\n  /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n  font-size: 1.125em;\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */ }\n  @media screen and (min-width: 480px) {\n    .section-heading, .section-heading-alt {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.3125em; } }\n  @media screen and (min-width: 700px) {\n    .section-heading, .section-heading-alt {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.4375em; } }\n  @media screen and (min-width: 1024px) {\n    .section-heading, .section-heading-alt {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 2.25em; } }\n\n.section-desc {\n  /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n  font-size: 1.0625em;\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  text-transform: uppercase; }\n  @media screen and (min-width: 480px) {\n    .section-desc {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.125em; } }\n  @media screen and (min-width: 700px) {\n    .section-desc {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.1875em; } }\n  @media screen and (min-width: 1024px) {\n    .section-desc {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.25em; } }\n  .section-desc-alt {\n    text-transform: none; }\n\n.article-heading {\n  /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n  font-size: 1.125em;\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  text-transform: uppercase; }\n  @media screen and (min-width: 480px) {\n    .article-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.3125em; } }\n  @media screen and (min-width: 700px) {\n    .article-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.4375em; } }\n  @media screen and (min-width: 1024px) {\n    .article-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1.5em; } }\n\n.section-heading-alt {\n  text-transform: uppercase; }\n\n.article-works-heading {\n  /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n  font-size: 0.6875em;\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  text-transform: uppercase; }\n  @media screen and (min-width: 480px) {\n    .article-works-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 0.75em; } }\n  @media screen and (min-width: 700px) {\n    .article-works-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 0.8125em; } }\n  @media screen and (min-width: 1024px) {\n    .article-works-heading {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1em; } }\n\n.nav-list--link {\n  /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n  font-size: 0.6875em;\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  text-transform: uppercase;\n  color: #e5e5e5; }\n  @media screen and (min-width: 480px) {\n    .nav-list--link {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 0.75em; } }\n  @media screen and (min-width: 700px) {\n    .nav-list--link {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 0.8125em; } }\n  @media screen and (min-width: 1024px) {\n    .nav-list--link {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1em; } }\n\ninput, select, textarea {\n  /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n  font-size: 0.6875em;\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */\n  /* If $fs-font-size is a key that exists in\n       $fs-breakpoints, use the value */ }\n  @media screen and (min-width: 480px) {\n    input, select, textarea {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 0.75em; } }\n  @media screen and (min-width: 700px) {\n    input, select, textarea {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 0.8125em; } }\n  @media screen and (min-width: 1024px) {\n    input, select, textarea {\n      /* If $fs-font-size is a list, include\n  // both font-size and line-height*/\n      font-size: 1em; } }\n\n/**\n * Clear inner floats\n */\n.clearfix::after {\n  clear: both;\n  content: '';\n  display: table; }\n\n/**\n * Main content containers\n * 1. Make the container full-width with a maximum width\n * 2. Center it in the viewport\n * 3. Leave some space on the edges, especially valuable on small screens\n */\n.container {\n  max-width: 1180px;\n  /* 1 */\n  margin-left: auto;\n  /* 2 */\n  margin-right: auto;\n  /* 2 */\n  padding-left: 20px;\n  /* 3 */\n  padding-right: 20px;\n  /* 3 */\n  width: 100%;\n  /* 1 */ }\n\n/**\n * Hide text while making it readable for screen readers\n * 1. Needed in WebKit-based browsers because of an implementation bug;\n *    See: https://code.google.com/p/chromium/issues/detail?id=457146\n */\n.hide-text {\n  overflow: hidden;\n  padding: 0;\n  /* 1 */\n  text-indent: 101%;\n  white-space: nowrap; }\n\n/**\n * Hide element while making it readable for screen readers\n * Shamelessly borrowed from HTML5Boilerplate:\n * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133\n */\n.visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  width: 1px; }\n\n.footer--content {\n  height: 100px;\n  background: #fff000;\n  margin-top: 30px; }\n\n/* maps and brealpoint */\n.section {\n  min-height: 302px;\n  padding-top: 140px;\n  /* If $mq-breakpoint is a key that exists in\n     $mq-breakpoints, get and use the value */ }\n  @media screen and (min-width: 1400px) {\n    .section {\n      min-height: 862px; } }\n\n.section-services {\n  background: #fcfcfc; }\n\n.section-skills {\n  background: #fcfcfc; }\n\n.section-works {\n  background: #fcfcfc; }\n\n.section-contact {\n  background: #fcfcfc; }\n\n.button, .work-item-link {\n  padding: 0.9375rem 1.5625rem;\n  transition: all 0.3s ease;\n  color: #fff;\n  cursor: pointer;\n  border: 2px solid #fff;\n  border: 2px solid rgba(255, 255, 255, 0.5);\n  background: transparent; }\n\n.work-item {\n  clear: both;\n  display: block;\n  height: 100%;\n  width: 100%;\n  margin-bottom: 0.625rem;\n  position: relative;\n  z-index: 900;\n  overflow: hidden;\n  cursor: pointer; }\n  .work-item:hover .work-item-overlay {\n    opacity: 1; }\n  .work-item-overlay {\n    /*display: none;*/\n    transition: opacity 0.5s ease;\n    height: 100%;\n    width: 100%;\n    opacity: 0;\n    position: absolute;\n    z-index: 50;\n    background: rgba(0, 204, 255, 0.6); }\n  .work-item-thumb {\n    filter: grayscale(100%);\n    display: block;\n    overflow: hidden;\n    width: 100%;\n    height: auto; }\n  .work-item-link {\n    margin: -1.625rem 0 0 -4.4375rem;\n    position: absolute;\n    z-index: 100;\n    top: 50%;\n    left: 50%; }\n\n.opa0 {\n  opacity: 0; }\n\n.opa1 {\n  opacity: 1; }\n\n.skill {\n  margin: 30px auto;\n  padding: 20px; }\n  .skill-trade {\n    display: block;\n    text-align: center; }\n  .skill-desp {\n    padding-top: 20px; }\n\n.skill-trade canvas {\n  max-width: 100%;\n  max-height: 100%; }\n\n.section-hero {\n  /*background: url(\"/Users/ross/Documents/projects-ross/rossgallego.github.io/assets/src/img/rg-hero.jpg\");*/\n  /*\t background: url(\"../../assets/src/img/rg-hero.jpg\");*/\n  background: url(" + __webpack_require__(21) + ");\n  background-size: cover;\n  background-repeat: no-repeat; }\n\n.top-heading {\n  /* If $mq-breakpoint is a key that exists in\n     $mq-breakpoints, get and use the value */ }\n  @media screen and (min-width: 1400px) {\n    .top-heading {\n      padding-top: 130px; } }\n\n.main-nav {\n  background: rgba(26, 26, 26, 0.6);\n  left: 0;\n  margin: 0;\n  padding: 25px 0 20px 0;\n  position: fixed;\n  right: 0;\n  top: 0;\n  z-index: 1030;\n  /* If $mq-breakpoint is a key that exists in\n     $mq-breakpoints, get and use the value */ }\n  @media screen and (min-width: 800px) {\n    .main-nav {\n      display: block; } }\n\n.nav-lists {\n  display: none;\n  /* If $mq-breakpoint is a key that exists in\n     $mq-breakpoints, get and use the value */ }\n  @media screen and (min-width: 800px) {\n    .nav-lists {\n      display: block; } }\n\n.nav-list {\n  display: block;\n  float: right;\n  margin: 0;\n  padding: 0; }\n  .nav-list--link {\n    display: block;\n    padding: 18px 20px 0 20px; }\n\n.nav-responsive {\n  display: block;\n  color: #fcfcfc;\n  float: right;\n  /* If $mq-breakpoint is a key that exists in\n     $mq-breakpoints, get and use the value */ }\n  @media screen and (min-width: 800px) {\n    .nav-responsive {\n      display: none; } }\n\n/* responsive */\n/* The Overlay (background) */\n.overlay {\n  /* Height & width depends on how you want to reveal the overlay (see JS below) */\n  height: 100%;\n  width: 0;\n  position: fixed;\n  /* Stay in place */\n  z-index: 1;\n  /* Sit on top */\n  left: 0;\n  top: 0;\n  background-color: black;\n  /* Black fallback color */\n  background-color: rgba(0, 0, 0, 0.9);\n  /* Black w/opacity */\n  overflow-x: hidden;\n  /* Disable horizontal scroll */\n  transition: 0.5s;\n  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */\n  z-index: 9998; }\n\n/* Position the content inside the overlay */\n.overlay-content {\n  position: relative;\n  top: 25%;\n  /* 25% from the top */\n  width: 100%;\n  /* 100% width */\n  text-align: center;\n  /* Centered text/links */\n  margin-top: 30px;\n  /* 30px top margin to avoid conflict with the close button on smaller screens */ }\n\n/* The navigation links inside the overlay */\n.overlay a {\n  padding: 8px;\n  text-decoration: none;\n  font-size: 36px;\n  color: #818181;\n  display: block;\n  /* Display block instead of inline */\n  transition: 0.3s;\n  /* Transition effects on hover (color) */ }\n\n/* When you mouse over the navigation links, change their color */\n.overlay a:hover, .overlay a:focus {\n  color: #f1f1f1; }\n\n/* Position the close button (top right corner) */\n.overlay .closebtn {\n  position: absolute;\n  top: 20px;\n  right: 45px;\n  font-size: 60px;\n  z-index: 9999; }\n\n/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */\n@media screen and (max-height: 450px) {\n  .overlay a {\n    font-size: 20px; }\n  .overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px; } }\n\n.contact-form {\n  padding: 45px 0; }\n\n.contact-input {\n  background: #f1f1f1;\n  border: 0 none;\n  color: #1a1a1a;\n  padding: 10px 20px;\n  margin-bottom: 10px;\n  width: 100%; }\n  .contact-input:focus {\n    border: 0 none; }\n\n.contact-text-area {\n  background: #f1f1f1;\n  border: 0 none;\n  color: #1a1a1a;\n  padding: 10px 20px;\n  margin-bottom: 10px;\n  width: 100%; }\n  .contact-text-area:focus {\n    border: 0 none; }\n\n.contact-btn {\n  background: #f1f1f1;\n  border: 0 none;\n  color: #1a1a1a;\n  display: block;\n  float: right;\n  padding: 10px 20px;\n  text-align: center;\n  width: 25%; }\n\n.foo {\n  content: key, key2;\n  content: value, value2;\n  content: true;\n  content: value; }\n\n/* page color */\n.bbb-col1 {\n  color: #000; }\n\n.bbb-col2 {\n  color: #ccc; }\n\n.bbb-col3 {\n  color: #ggg; }\n", ""]);
 
 // exports
 
@@ -13407,6 +13426,173 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
+ * jQuery.appear
+ * https://github.com/bas2k/jquery.appear/
+ * http://code.google.com/p/jquery-appear/
+ * http://bas2k.ru/
+ *
+ * Copyright (c) 2009 Michael Hixson
+ * Copyright (c) 2012-2014 Alexander Brovikov
+ * Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php)
+ */
+(function (root, factory) {
+    if (true) {
+        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+    } else if (typeof module === 'object' && module.exports) {
+        factory(require('jquery'));
+    } else {
+        factory(root.jQuery);
+    }
+}(this, function ($) {
+    $.fn.appear = function(fn, options) {
+
+        var settings = $.extend({
+
+            //arbitrary data to pass to fn
+            data: undefined,
+
+            //call fn only on the first appear?
+            one: true,
+
+            // X & Y accuracy
+            accX: 0,
+            accY: 0
+
+        }, options);
+
+        return this.each(function() {
+
+            var t = $(this);
+
+            //whether the element is currently visible
+            t.appeared = false;
+
+            if (!fn) {
+
+                //trigger the custom event
+                t.trigger('appear', settings.data);
+                return;
+            }
+
+            var w = $(window);
+
+            //fires the appear event when appropriate
+            var check = function() {
+
+                //is the element hidden?
+                if (!t.is(':visible')) {
+
+                    //it became hidden
+                    t.appeared = false;
+                    return;
+                }
+
+                //is the element inside the visible window?
+                var a = w.scrollLeft();
+                var b = w.scrollTop();
+                var o = t.offset();
+                var x = o.left;
+                var y = o.top;
+
+                var ax = settings.accX;
+                var ay = settings.accY;
+                var th = t.height();
+                var wh = w.height();
+                var tw = t.width();
+                var ww = w.width();
+
+                if (y + th + ay >= b &&
+                    y <= b + wh + ay &&
+                    x + tw + ax >= a &&
+                    x <= a + ww + ax) {
+
+                    //trigger the custom event
+                    if (!t.appeared) t.trigger('appear', settings.data);
+
+                } else {
+
+                    //it scrolled out of view
+                    t.appeared = false;
+                }
+            };
+
+            //create a modified fn with some additional logic
+            var modifiedFn = function() {
+
+                //mark the element as visible
+                t.appeared = true;
+
+                //is this supposed to happen only once?
+                if (settings.one) {
+
+                    //remove the check
+                    w.unbind('scroll', check);
+                    var i = $.inArray(check, $.fn.appear.checks);
+                    if (i >= 0) $.fn.appear.checks.splice(i, 1);
+                }
+
+                //trigger the original fn
+                fn.apply(this, arguments);
+            };
+
+            //bind the modified fn to the element
+            if (settings.one) t.one('appear', settings.data, modifiedFn);
+            else t.bind('appear', settings.data, modifiedFn);
+
+            //check whenever the window scrolls
+            w.scroll(check);
+
+            //check whenever the dom changes
+            $.fn.appear.checks.push(check);
+
+            //check now
+            (check)();
+        });
+    };
+
+    //keep a queue of appearance checks
+    $.extend($.fn.appear, {
+
+        checks: [],
+        timeout: null,
+
+        //process the queue
+        checkAll: function() {
+            var length = $.fn.appear.checks.length;
+            if (length > 0) while (length--) ($.fn.appear.checks[length])();
+        },
+
+        //check the queue asynchronously
+        run: function() {
+            if ($.fn.appear.timeout) clearTimeout($.fn.appear.timeout);
+            $.fn.appear.timeout = setTimeout($.fn.appear.checkAll, 20);
+        }
+    });
+
+    //run checks when these methods are called
+    $.each(['append', 'prepend', 'after', 'before', 'attr',
+        'removeAttr', 'addClass', 'removeClass', 'toggleClass',
+        'remove', 'css', 'show', 'hide'], function(i, n) {
+        var old = $.fn[n];
+        if (old) {
+            $.fn[n] = function() {
+                var r = old.apply(this, arguments);
+                $.fn.appear.run();
+                return r;
+            }
+        }
+    });
+}));
+
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
@@ -13430,7 +13616,7 @@ if(false) {
 }
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -13456,7 +13642,7 @@ if(false) {
 }
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(3);

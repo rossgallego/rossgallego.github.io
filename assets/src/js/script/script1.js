@@ -1,7 +1,9 @@
 require('bootstrap-loader');
 require("../../style/main.scss");
 
+require('jquery.appear');
 require('jquery-circle-progress');
+
 //alert(m);
 
 const mm = "it works";
@@ -54,50 +56,81 @@ module.exports= mm;
 
 
 
-$(".skill-layout").circleProgress({
-    value: 0.75,
+
+
+
+
+
+$('.skill-trade').appear(function() {
+
+    skillLayout();
+    skillJs();
+    skillWp();
+    skillVersion();
+    skillPrer();
+    skillGraphic();
+
+});
+
+
+
+$(".skill-trade").circleProgress({
+    value: 0.0,
     size: 170,
+    size: 1000,
     fill: {
       gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
     },
     duration: 1200, 
     easing: "circleProgressEase" 
-});
-$(".skill-js").circleProgress({
-    value: 0.75,
-    size: 170,
-    fill: {
-      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
-    }
-});
-$(".skill-wp").circleProgress({
-    value: 0.75,
-    size: 170,
-    fill: {
-      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
-    }
-});
-$(".skill-version").circleProgress({
-    value: 0.75,
-    size: 170,
-    fill: {
-      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
-    }
-});
-$(".skill-prep").circleProgress({
-    value: 0.75,
-    size: 170,
-    fill: {
-      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
-    }
-});
-$(".skill-graphic").circleProgress({
-    value: 0.75,
-    size: 170,
-    fill: {
-      gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
-    }
-});
+})
+
+var skillLayout = function(){
+    $(".skill-layout").circleProgress({
+        value: 0.75
+    })
+};
+var skillJs = function(){
+  $(".skill-js").circleProgress({
+      value: 0.75
+  });
+}
+var skillWp = function(){
+  $(".skill-wp").circleProgress({
+      value: 0.75
+  });
+}
+var skillVersion = function(){
+  $(".skill-version").circleProgress({
+      value: 0.75
+  });
+}
+var skillPrer = function(){
+  $(".skill-prep").circleProgress({
+      value: 0.75,
+  })
+}
+var skillGraphic = function(){
+  $(".skill-graphic").circleProgress({
+      value: 0.75,
+  });
+}
+
+
+
+
+
+
+
+// el.appear({ force_process: true });
+
+// el.on('appear', function() {
+//   if (!inited) {
+//     el.circleProgress({ value: 0.7 });
+//     inited = true;
+//   }
+// });
+
 
 /*
 $(function(){
