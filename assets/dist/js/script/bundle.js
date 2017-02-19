@@ -10211,12 +10211,13 @@ __webpack_require__(22);
 var mm = "it works";
 module.exports = mm;
 
-$(".work-item").on("tap", function () {
-    $(this).find(".work-item-overlay").addClass("opa1");
-});
+// $(".work-item").on("tap",function(){
+//     $(this).find(".work-item-overlay").addClass("opa1");
+// })
 
-$(document).on("scrollstart", function () {
-    $(".work-item-overlay").removeClass("opa1").addClass("opa0");
+$(".work-item").on("", function () {
+    // $(this).find(".work-item-overlay").css("display","block");
+    $(this).find(".work-item-overlay").addClass("opa1");
 });
 
 /*
