@@ -12,6 +12,10 @@ module.exports= mm;
         // $(this).find(".work-item-overlay").css("display","block");
         $(this).find(".work-item-overlay").addClass("opa1");
     })
+    $(".overlay-close").on("click",function(){
+        // $(this).find(".work-item-overlay").css("display","block");
+        $(this).closest(".work-item-overlay").removeClass("opa1").addClass("opa0");
+    })
     $(".work-item").on("mouseover",function(){
         // $(this).find(".work-item-overlay").css("display","block");
         $(this).find(".work-item-overlay").addClass("opa1");
