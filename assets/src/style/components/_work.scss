@@ -9,11 +9,11 @@
 }
 
 .work-item {
+    clear: both;
     display: block;
     height: 100%;
     width: 100%;
     margin-bottom: 0.625rem;
-    float: left;
     position: relative;
     z-index: 10;
     overflow: hidden;
