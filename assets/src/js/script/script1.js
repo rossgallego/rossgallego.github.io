@@ -77,10 +77,6 @@ $(document).scroll(function() {
 
 
 
-// offset.top
-
-
-
 
 
 
@@ -116,7 +112,8 @@ var skillWp = function(){
       gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
     },
     duration: 1200, 
-    easing: "circleProgressEase" 
+    easing: "circleProgressEase",
+    insertMode: 'prepend' 
   });
 }
 var skillVersion = function(){

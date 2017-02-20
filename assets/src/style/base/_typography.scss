@@ -71,41 +71,41 @@ $p-text: (
 );
 
 $main-heading: (
-    null  : 28,
-    small : 31,
-    medium : 33,
+    null  : 34,
+    small : 35,
+    medium : 38,
     large: (48, 1.7),
     1440px: (60,1.7)
 );
 $sub-heading: (
-    null  : 18,
-    small : 21,
-    medium : 23,
+    null  : 19,
+    small : 19,
+    medium : 24,
     large: 24,
     1440px: (24,1.7)
 );
 $section-heading: (
-    null  : 21,
-    small : 25,
-    medium : 30,
+    null  : 27,
+    small : 29,
+    medium : 33,
     large: 36 
 );
 $section-desc: (
     null  : 14,
-    small : 18,
+    small : 16,
     medium : 19,
     large: 20   
 );
 $article-heading: (
-    null  : 15,
+    null  : 21,
     small : 21,
     medium : 23,
     large: 24
 );
 $article-works-heading:(
-    null  : 11,
-    small : 12,
-    medium : 13,
+    null  : 14,
+    small : 14,
+    medium : 16,
     large: 16
 );
 $form-text:(
@@ -125,12 +125,19 @@ $nav-list--link:(
 p{
     @include font-size($p-text);
 }
+.p-text-services{
+    text-align: center;
+}
 h1,h2,h3,h4,h5{
     line-height: 1.5
 }
 .top-heading{
 	@include font-size($main-heading);
     color: $light-color;
+    text-transform: uppercase;
+}
+.top-heading-alt{
+    color: $brand-color;
 }
 .top-sub-heading{
 	@include font-size($sub-heading);
