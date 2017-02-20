@@ -85,19 +85,19 @@ $sub-heading: (
     1440px: (24,1.7)
 );
 $section-heading: (
-    null  : 18,
-    small : 21,
-    medium : 23,
+    null  : 21,
+    small : 25,
+    medium : 30,
     large: 36 
 );
 $section-desc: (
-    null  : 17,
+    null  : 14,
     small : 18,
     medium : 19,
     large: 20   
 );
 $article-heading: (
-    null  : 18,
+    null  : 15,
     small : 21,
     medium : 23,
     large: 24
@@ -138,17 +138,20 @@ h1,h2,h3,h4,h5{
 }
 .section-heading{
     @include font-size($section-heading);  
+    text-align: center;
 }
 .section-desc{
      @include font-size($section-desc);
      text-transform: uppercase;
+     text-align: center;
      &-alt{
         text-transform: none;
      }
 }
 .article-heading{
      @include font-size($article-heading);
-     text-transform: uppercase;    
+     text-transform: uppercase;  
+     text-align: center;  
 }
 .section-heading-alt{
     @extend .section-heading;

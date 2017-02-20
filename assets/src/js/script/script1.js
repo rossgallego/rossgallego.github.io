@@ -56,7 +56,10 @@ module.exports= mm;
 
 
 
-
+// hero always full
+$(window).resize(function() {
+    $(".section-hero").height($(window).height());
+}).resize();
 
 
 

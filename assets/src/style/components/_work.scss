@@ -1,3 +1,25 @@
+/* maps and brealpoint */
+$breakpoints: (
+  null: 0,
+  x-small: 544px,
+  small : 740px,
+  medium: 800px,
+  large : 1024px,
+  xlarge: 1400px
+
+);
+/* example usage inline
+.main {
+  width: 100%;
+  @include mq(medium) {
+    width: 60%;
+  }
+  @include mq(large) {
+    width: 70%;
+  }
+}
+*/
+
 .button {
     padding: 0.9375rem 1.5625rem;
     transition: all 0.3s ease;
@@ -9,11 +31,12 @@
 }
 
 .work-item {
-    clear: both;
+/*    clear: both;
     display: block;
     height: 100%;
     width: 100%;
-    margin-bottom: 0.625rem;
+    margin-bottom: 0.625rem;*/
+    margin: 30px 0 10px 0; 
     position: relative;
     z-index: 900;
     overflow: hidden;
@@ -50,12 +73,9 @@
         @extend .button
     }
 }
+.article-works-heading{
+     margin: 0;
+}  
 
 
-.opa0{
-                opacity: 0;
-}
-.opa1{
-                opacity: 1;
-}
 

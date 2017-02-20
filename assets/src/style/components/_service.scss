@@ -20,26 +20,7 @@ $breakpoints: (
 }
 */
 
-.section{
-	padding-top: 100px;
-	@include mq(xlarge) {
-		min-height: 862px;
-	}
-}
-
-
-
-
-
-.section-services{
-	/*background: $light-color;*/
-}
-.section-skills{
-	/*background: $light-color;*/
-}
-.section-works{
-	/*background: $light-color;*/
-}
-.section-contact{
-	/*background: $light-color;*/
+.service-provide{
+	margin-top: 30px;
+	text-align: center;
 }
