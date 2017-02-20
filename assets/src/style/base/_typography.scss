@@ -21,6 +21,21 @@
 }
 
 */
+
+
+/*start mixin*/
+/* breakpoints */
+$breakpoints: (
+  null: 0,
+  x-small: 400px,
+  small: 640px,
+  medium:800,
+  medium_2: 900px,
+  large : 1280px,
+  x-large: 1600px,
+  xx-large:2000px
+);
+
 @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
   @each $fs-breakpoint, $fs-font-size in $fs-map {
     @if $fs-breakpoint == null {
@@ -38,7 +53,7 @@
     }
   }
 }
-/* Utility function for mixin font-size */
+/* Utility function for mixin font-size using mixin EM*/
 @mixin make-font-size($fs-font-size) {
   /* If $fs-font-size is a list, include
   // both font-size and line-height*/
@@ -52,12 +67,9 @@
     font-size: em($fs-font-size);
   }
 }
-/* breakpoints */
-$breakpoints: (
-  small : 480px,
-  medium: 700px,
-  large : 1024px
-);
+/*end mixin*/
+
+
 /*
 Now, what if we want an element to have a font size for a custom breakpoint that doesn’t 
 exist in $breakpoints? In the font-sizes map, simply drop in the breakpoint value instead of a 
@@ -70,19 +82,36 @@ $p-text: (
     large: 16
 );
 
+
+/*  null: 0,
+  x-small: 400px,
+  small: 640px,
+  medium:800,
+  medium_2: 900px,
+  large : 1280px,
+  x-large: 1600px,
+  xx-large:2000px
+*/
+
 $main-heading: (
-    null  : 34,
-    small : 35,
+    null  : 27,
+    x-small: 35,
+    small : 36,
     medium : 38,
+    medium_2: 40,
     large: (48, 1.7),
-    1440px: (60,1.7)
+    x-large: 50,
+    xx-large: (60,1.7)
 );
 $sub-heading: (
-    null  : 19,
-    small : 19,
-    medium : 24,
-    large: 24,
-    1440px: (24,1.7)
+    null  : 16,
+    x-small: 35,
+    small : 36,
+    medium : 38,
+    medium_2: 40,
+    large: (48, 1.7),
+    x-large: 50,
+    xx-large: (60,1.7) 
 );
 $section-heading: (
     null  : 27,
@@ -122,24 +151,26 @@ $nav-list--link:(
 );
 
 
+
 p{
     @include font-size($p-text);
-}
-.p-text-services{
-    text-align: center;
 }
 h1,h2,h3,h4,h5{
     line-height: 1.5
 }
-.top-heading{
+input, select, textarea{
+     @include font-size($form-text);     
+} 
+
+.main-heading{
 	@include font-size($main-heading);
     color: $light-color;
     text-transform: uppercase;
+    &-alt{
+        color: $brand-color;
+    }
 }
-.top-heading-alt{
-    color: $brand-color;
-}
-.top-sub-heading{
+.sub-heading{
 	@include font-size($sub-heading);
     color: $light-color;
 }
@@ -173,6 +204,7 @@ h1,h2,h3,h4,h5{
      text-transform: uppercase;
     color: $grey-color
 }
-input, select, textarea{
-     @include font-size($form-text);     
-} 
+.p-text-services{
+    text-align: center;
+}
+

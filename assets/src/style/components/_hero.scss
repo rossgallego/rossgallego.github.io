@@ -1,5 +1,5 @@
 /* maps and brealpoint */
-$breakpoints: (
+/*$breakpoints: (
   null: 0,
   x-small: 544px,
   small : 740px,
@@ -7,7 +7,7 @@ $breakpoints: (
   large : 1024px,
   xlarge: 1400px
 
-);
+);*/
 /* example usage inline
 .main {
   width: 100%;
@@ -21,6 +21,18 @@ $breakpoints: (
 */
 
 
+/* break point verison 2 */
+/*$breakpoints_2: (
+  null: 0,
+  x-small: 400px,
+  small: 640px,
+  medium:800,
+  medium_2: 900px,
+  large : 1280px,
+  x-large: 1600px,
+  xx-large:2000px
+);*/
+
 .section-hero{
 	/*background: url("/Users/ross/Documents/projects-ross/rossgallego.github.io/assets/src/img/rg-hero.jpg");*/
 /*	 background: url("../../assets/src/img/rg-hero.jpg");*/
@@ -30,9 +42,15 @@ $breakpoints: (
 	padding: 0;
 }
 
-.top-heading{
+.main-heading{
 	padding-top: 140px;
-	@include mq(xlarge) {
-		padding-top: 130px;
+	@include mq_2(medium_2) {
+		padding-top: 167px;
+	}	
+	@include mq_2(large) {
+		padding-top: 177px;
+	}	
+	@include mq_2(x-large) {
+		padding-top: 179px;
 	}	
 }

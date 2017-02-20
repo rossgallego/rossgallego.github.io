@@ -29,6 +29,29 @@ $breakpoints: (
   }
 }
 
+
+/* break point verison 2 */
+$breakpoints_2: (
+  null: 0,
+  x-small: 400px,
+  small: 640px,
+  medium:800,
+  medium_2: 900px,
+  large : 1280px,
+  x-large: 1600px,
+  xx-large:2000px
+);
+@mixin mq_2($mq-breakpoint_2, $mq-breakpoints_2: $breakpoints_2) {
+  /* If $mq-breakpoint is a key that exists in
+     $mq-breakpoints, get and use the value */
+  @if map-has-key($mq-breakpoints_2, $mq-breakpoint_2) {
+    $mq-breakpoint_2: map-get($mq-breakpoints_2, $mq-breakpoint_2);
+  }
+  @media screen and (min-width: #{$mq-breakpoint_2}) {
+    @content;
+  }
+}
+
 /* example usage inline
 .main {
   width: 100%;
