@@ -27,10 +27,11 @@ $breakpoints: (
 	background: url("rg-hero.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	padding-bottom: 100px;
+	padding: 0;
 }
 
 .top-heading{
+	padding-top: 140px;
 	@include mq(xlarge) {
 		padding-top: 130px;
 	}	

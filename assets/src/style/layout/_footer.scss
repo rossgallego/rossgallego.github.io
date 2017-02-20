@@ -1,9 +1,10 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
-.footer{}
-.footer--content{
-	height: 100px;
-	background: #fff000;
+.footer{
+	background: $brand-color
+}
+.footer-content{
+	height: 200px;
 	margin-top: 30px
 }
