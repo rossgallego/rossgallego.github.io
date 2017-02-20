@@ -1,9 +1,33 @@
+/* maps and brealpoint */
+$breakpoints: (
+  null: 0,
+  x-small: 544px,
+  small : 740px,
+  medium: 800px,
+  large : 1024px,
+  xlarge: 1400px
+
+);
+/* example usage inline
+.main {
+  width: 100%;
+  @include mq(medium) {
+    width: 60%;
+  }
+  @include mq(large) {
+    width: 70%;
+  }
+}
+*/
+
+
 .section-hero{
 	/*background: url("/Users/ross/Documents/projects-ross/rossgallego.github.io/assets/src/img/rg-hero.jpg");*/
 /*	 background: url("../../assets/src/img/rg-hero.jpg");*/
-background: url("rg-hero.jpg");
+	background: url("rg-hero.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
+	padding-bottom: 100px;
 }
 
 .top-heading{

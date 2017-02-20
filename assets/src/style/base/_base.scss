@@ -8,9 +8,15 @@ html {
   font-size: 100%;
 }
 body {
-  font-size: em($main-text); line-height: 1.5;
+  font-size: em($main-text); 
+  line-height: 1.5;
+  background: url("bg.png");
+  background-repeat: repeat
 }
-
+a,a:hover,a:focus,a:active{
+   text-decoration: none !important;
+    color: $light-color
+}
 h1,h2,h3,h4,h5{
     line-height: 1.5
 }

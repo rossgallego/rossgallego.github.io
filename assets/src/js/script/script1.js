@@ -60,6 +60,21 @@ module.exports= mm;
 
 
 
+// .scrollTop()
+$(document).scroll(function() {
+  var appSctop = $(this).scrollTop();
+  var servOffset = $(".section-services").offset().top;
+  if (appSctop < servOffset) {
+  $(".main-nav").addClass("main-nav--light").removeClass("main-nav--dark")
+  } else {
+  $(".main-nav").addClass("main-nav--dark").removeClass("main-nav--light")
+  }
+});
+
+
+
+
+// offset.top
 
 
 
