@@ -1,9 +1,36 @@
 .section-hero{
-	background: url("rg-hero.jpg");
+/*	background: url("hero-1700.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
+	padding: 0;*/
 	padding: 0;
+	overflow: hidden;
 }
+
+.hero-bg{
+	background: url("rg-hero-bg-400.jpg");
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+	height: 100% !important;
+	padding: 0;
+    @include mq_2(x-small) {
+		background: url("rg-hero-bg-700.jpg");
+    }
+    @include mq_2(small) {
+		background: url("rg-hero-bg-900.jpg");
+    }
+    @include mq_2(medium) {
+		background: url("rg-hero-bg-1000.jpg");
+    }
+    @include mq_2(medium-2) {
+		background: url("rg-hero-bg-1300.jpg");
+    }
+    @include mq_2(large) {
+		background: url("rg-hero-bg-1700.jpg");
+    }
+    
+}
+
 
 .main-heading{
 	padding-bottom: 30px;
@@ -16,14 +43,18 @@
 	}	
 	@include mq_2(small) {
 		padding-top: 150px;
+		padding-bottom: 40px;
 	}	
+	@include mq_2(medium) {
+		padding-top: 170px;
+	}
 	@include mq_2(medium-2) {
-		padding-top: 167px;
+		padding-top: 200px;
 	}	
 	@include mq_2(large) {
-		padding-top: 177px;
+		padding-top: 230px;
 	}	
 	@include mq_2(x-large) {
-		padding-top: 179px;
+		padding-top: 260px;
 	}	
 }

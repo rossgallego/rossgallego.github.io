@@ -55,6 +55,21 @@
     @include mq_2(x-small) {
         width: 274px;
     }
+    @include mq_2(small) {
+        width: 315px;
+    }
+    @include mq_2(medium) {
+        height: 52px;
+        width: 328px;
+    }
+    @include mq_2(large) {
+        height: 58px;
+        width: 365px;
+    }
+    @include mq_2(large) {
+        height: 61px;
+        width: 380px;
+    }
 }
 .nav-responsive{
 	display: block;

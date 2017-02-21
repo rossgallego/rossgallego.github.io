@@ -6,8 +6,8 @@ $breakpoints: (
   xx-small:350px,
   x-small: 400px,
   small: 640px,
-  medium:800,
-  medium_2: 900px,
+  medium: 800px,
+  medium-2: 900px,
   large : 1280px,
   x-large: 1600px,
   xx-large:2000px
@@ -56,47 +56,47 @@ name as the key, and the mixin will do the work for you:
 /*headings*/
 $main-heading: (
     null  : 29,
-    xx-small:35,
+    xx-small:34,
     x-small: 37,
-    small : 36,
-    medium : 38,
-    medium_2: 40,
-    large: (48, 1.7),
-    x-large: 50,
+    small : (48,1.4),
+    medium : 51,
+    medium-2: 54,
+    large: (56, 1.7),
+    x-large: 60,
     xx-large: (60,1.7)
 );
 $sub-heading: (
     null  : 17,
     xx-small:20,
     x-small: 22,
-    small : 36,
-    medium : 38,
-    medium_2: 40,
-    large: (48, 1.7),
-    x-large: 50,
-    xx-large: (60,1.7) 
+    small : (25,1.6),
+    medium : 27,
+    medium-2: 29,
+    large: 30,
+    x-large: (33,1.7),
+    xx-large: 35 
 );
 $section-heading: (
     null  : 21,
     xx-small: 25,
     x-small: 29,
-    small : 29,
+    small : 32,
     medium : 33,
-    medium_2: 40,
-    large: (36, 1.7),
-    x-large: 50,
-    xx-large: (60,1.7) 
+    medium-2: 34,
+    large: (37, 1.7),
+    x-large: 38,
+    xx-large: (39,1.7) 
 );
 $article-heading: (
-    null  : 18,
-    xx-small: 18,
-    x-small: 22,
-    small : 21,
-    medium : 23,
-    medium-2: 23,
-    large: 24,
-    x-large: 30,
-    xx-large: 30 
+    null  : 14,
+    xx-small: 15,
+    x-small: 15,
+    small : 16,
+    medium : 16,
+    medium-2: 17,
+    large: 18,
+    x-large: 18,
+    xx-large: 19 
 );
 $article-works-heading:(
     null  : 14,
@@ -110,15 +110,19 @@ $article-works-heading:(
 $p-text: (
     null  : 15,
     xx-small: 16,
+    x-small: 16,
     small : 16,
     medium : 16,
-    large: 16
+    medium_2: 17,
+    large: 18,
+    x-large: 19,
+    xx-large: 19 
 );
 $section-desc: (
     null  : 13,
     xx-small: 16,
     x-small: 16,
-    small : 16,
+    small : 20,
     medium : 19,
     medium_2: 19,
     large: (20, 1.7),

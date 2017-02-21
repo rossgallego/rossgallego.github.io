@@ -1,11 +1,18 @@
 .section{
 	padding-top: 120px;
-	@include mq(xlarge) {
-		min-height: 862px;
+	@include mq_2(large) {
+		padding-top: 150px;
+		padding-bottom: 150px;
 	}
 }
 
 .article-heading{
-	margin-bottom: 10px;
-	
+	margin: 10px 0;	
+}
+
+.section-heading{
+	margin-bottom: 20px;
+}
+.section-desc{
+  margin-bottom: 50px; 
 }

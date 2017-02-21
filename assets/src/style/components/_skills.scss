@@ -1,28 +1,10 @@
-/* maps and brealpoint */
-$breakpoints: (
-  null: 0,
-  x-small: 544px,
-  small : 740px,
-  medium: 800px,
-  large : 1024px,
-  xlarge: 1400px
-
-);
-/* example usage inline
-.main {
-  width: 100%;
-  @include mq(medium) {
-    width: 60%;
-  }
-  @include mq(large) {
-    width: 70%;
-  }
-}
-*/
 
 .section-skills{}
 .skill{
     margin: 15px auto;
+    @include mq_2(x-large) {
+      margin: 30px auto;
+    } 
     &-trade{
         display: block;
         text-align: center
@@ -30,7 +12,6 @@ $breakpoints: (
     &-desp{
         padding-top: 10px
     }
-
 }
 .skill-trade{
 	max-height: 300px;
@@ -45,15 +26,16 @@ $breakpoints: (
     left: 0;
     margin: auto;
     position: absolute;
-	padding-top: 10px;
     right: 0;
     text-align: center;
     top: 55px;
     width: 90px;
+    @include mq_2(large) {
+      top:60px
+    }    
+    @include mq_2(x-large) {
+      top:80px
+    }
 }
 
-
-.section-heading{
-	margin-bottom: 20px;
-}
 
