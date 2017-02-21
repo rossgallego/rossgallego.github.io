@@ -1,32 +1,9 @@
-/**
- * Basic typography style for copy text, MAPS
- */
-/*
-  @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
-  @each $fs-breakpoint, $fs-font-size in $fs-map {
-    @if $fs-breakpoint == null {
-    
-      font-size: em($fs-font-size);
-    }
-    @else {
-   */   /* If $fs-font-size is a key that exists in $fs-breakpoints, use the value *//*
-      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
-        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
-      }
-      @media screen and (min-width: $fs-breakpoint) {
-        font-size: em($fs-font-size);
-      }
-    }
-  }
-}
-
-*/
-
 
 /*start mixin*/
 /* breakpoints */
 $breakpoints: (
   null: 0,
+  xx-small:350px,
   x-small: 400px,
   small: 640px,
   medium:800,
@@ -75,27 +52,12 @@ Now, what if we want an element to have a font size for a custom breakpoint that
 exist in $breakpoints? In the font-sizes map, simply drop in the breakpoint value instead of a 
 name as the key, and the mixin will do the work for you:
 */
-$p-text: (
-    null  : 15,
-    small : 15,
-    medium : 16,
-    large: 16
-);
 
-
-/*  null: 0,
-  x-small: 400px,
-  small: 640px,
-  medium:800,
-  medium_2: 900px,
-  large : 1280px,
-  x-large: 1600px,
-  xx-large:2000px
-*/
-
+/*headings*/
 $main-heading: (
-    null  : 27,
-    x-small: 35,
+    null  : 29,
+    xx-small:35,
+    x-small: 37,
     small : 36,
     medium : 38,
     medium_2: 40,
@@ -104,8 +66,9 @@ $main-heading: (
     xx-large: (60,1.7)
 );
 $sub-heading: (
-    null  : 16,
-    x-small: 35,
+    null  : 17,
+    xx-small:20,
+    x-small: 24,
     small : 36,
     medium : 38,
     medium_2: 40,
@@ -114,22 +77,25 @@ $sub-heading: (
     xx-large: (60,1.7) 
 );
 $section-heading: (
-    null  : 27,
+    null  : 21,
+    xx-small: 25,
+    x-small: 27,
     small : 29,
     medium : 33,
-    large: 36 
-);
-$section-desc: (
-    null  : 14,
-    small : 16,
-    medium : 19,
-    large: 20   
+    medium_2: 40,
+    large: (36, 1.7),
+    x-large: 50,
+    xx-large: (60,1.7) 
 );
 $article-heading: (
-    null  : 21,
+    null  : 18,
+    x-small: 21,
     small : 21,
     medium : 23,
-    large: 24
+    medium_2: 23,
+    large: 24,
+    x-large: 30,
+    xx-large: 30 
 );
 $article-works-heading:(
     null  : 14,
@@ -137,55 +103,55 @@ $article-works-heading:(
     medium : 16,
     large: 16
 );
-$form-text:(
-    null  : 11,
-    small : 12,
-    medium : 13,
+
+
+/*paragraphs*/
+$p-text: (
+    null  : 15,
+    xx-small: 16,
+    small : 16,
+    medium : 16,
     large: 16
 );
+$section-desc: (
+    null  : 13,
+    xx-small: 16,
+    x-small: 16,
+    small : 16,
+    medium : 19,
+    medium_2: 19,
+    large: (20, 1.7),
+    x-large: 20,
+    xx-large: (20,1.7) 
+);
+/*links*/
 $nav-list--link:(
     null  : 11,
     small : 12,
     medium : 13,
     large: 16
 );
+/*forms etc */
+$form-text:(
+    null  : 11,
+    small : 12,
+    medium : 13,
+    large: 16
+);
 
-
-
-p{
-    @include font-size($p-text);
-}
-h1,h2,h3,h4,h5{
-    line-height: 1.5
-}
-input, select, textarea{
-     @include font-size($form-text);     
-} 
-
+/*headings*/
 .main-heading{
 	@include font-size($main-heading);
-    color: $light-color;
     text-transform: uppercase;
-    &-alt{
-        color: $brand-color;
-    }
 }
 .sub-heading{
 	@include font-size($sub-heading);
-    color: $light-color;
 }
 .section-heading{
     @include font-size($section-heading);  
     text-align: center;
 }
-.section-desc{
-     @include font-size($section-desc);
-     text-transform: uppercase;
-     text-align: center;
-     &-alt{
-        text-transform: none;
-     }
-}
+
 .article-heading{
      @include font-size($article-heading);
      text-transform: uppercase;  
@@ -198,13 +164,34 @@ input, select, textarea{
 .article-works-heading{
      @include font-size($article-works-heading);
      text-transform: uppercase;
-}  
+} 
+
+/*paragraphs*/
+p{
+    @include font-size($p-text);
+}
+.section-desc{
+     @include font-size($section-desc);
+     text-transform: uppercase;
+     text-align: center;
+     &-alt{
+        text-transform: none;
+     }
+}
+.services-desc{
+    text-align: center;
+}
+.skill-desp{
+    
+}
+
+/*links*/
 .nav-list--link{
      @include font-size($nav-list--link);
      text-transform: uppercase;
-    color: $grey-color
-}
-.p-text-services{
-    text-align: center;
 }
 
+/*misc*/
+input, select, textarea{
+     @include font-size($form-text);     
+} 

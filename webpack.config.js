@@ -47,7 +47,7 @@ plugins: [
 
 /**/
 {
-  test: /\.(jpe?g|gif|png)$/,
+  test: /\.(jpe?g|gif|png|svg)$/,
      loader: 'file-loader?emitFile=false&name=[path][name].[ext]'
 },
 

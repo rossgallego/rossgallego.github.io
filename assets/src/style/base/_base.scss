@@ -4,10 +4,11 @@
 
 /* bootstrap override  and default */
 html { 
-    box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 100%;
 }
 body {
+  color: $dark-color;
   font-size: em($main-text); 
   line-height: 1.5;
   background: url("bg.png");
@@ -18,11 +19,11 @@ a,a:hover,a:focus,a:active{
     color: $light-color
 }
 h1,h2,h3,h4,h5{
-    line-height: 1.5
+    line-height: 1.5;
+    padding: 0;
+    margin: 0
 }
 ul,li{margin:0;padding:0;list-style: none}
-
-
 
 
 

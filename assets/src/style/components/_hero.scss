@@ -1,41 +1,4 @@
-/* maps and brealpoint */
-/*$breakpoints: (
-  null: 0,
-  x-small: 544px,
-  small : 740px,
-  medium: 800px,
-  large : 1024px,
-  xlarge: 1400px
-
-);*/
-/* example usage inline
-.main {
-  width: 100%;
-  @include mq(medium) {
-    width: 60%;
-  }
-  @include mq(large) {
-    width: 70%;
-  }
-}
-*/
-
-
-/* break point verison 2 */
-/*$breakpoints_2: (
-  null: 0,
-  x-small: 400px,
-  small: 640px,
-  medium:800,
-  medium_2: 900px,
-  large : 1280px,
-  x-large: 1600px,
-  xx-large:2000px
-);*/
-
 .section-hero{
-	/*background: url("/Users/ross/Documents/projects-ross/rossgallego.github.io/assets/src/img/rg-hero.jpg");*/
-/*	 background: url("../../assets/src/img/rg-hero.jpg");*/
 	background: url("rg-hero.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -43,8 +6,12 @@
 }
 
 .main-heading{
+	padding-bottom: 30px;
 	padding-top: 140px;
-	@include mq_2(medium_2) {
+	@include mq_2(xx-small) {
+		padding-top: 170px;
+	}	
+	@include mq_2(medium-2) {
 		padding-top: 167px;
 	}	
 	@include mq_2(large) {

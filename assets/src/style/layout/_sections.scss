@@ -1,45 +1,6 @@
-/* maps and brealpoint */
-$breakpoints: (
-  null: 0,
-  x-small: 544px,
-  small : 740px,
-  medium: 800px,
-  large : 1024px,
-  xlarge: 1400px
-
-);
-/* example usage inline
-.main {
-  width: 100%;
-  @include mq(medium) {
-    width: 60%;
-  }
-  @include mq(large) {
-    width: 70%;
-  }
-}
-*/
-
 .section{
-	padding-top: 100px;
+	padding-top: 120px;
 	@include mq(xlarge) {
 		min-height: 862px;
 	}
-}
-
-
-
-
-
-.section-services{
-	/*background: $light-color;*/
-}
-.section-skills{
-	/*background: $light-color;*/
-}
-.section-works{
-	/*background: $light-color;*/
-}
-.section-contact{
-	/*background: $light-color;*/
 }
