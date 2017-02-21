@@ -7,9 +7,15 @@
 
 .main-heading{
 	padding-bottom: 30px;
-	padding-top: 140px;
+	padding-top: 120px;
 	@include mq_2(xx-small) {
-		padding-top: 170px;
+		padding-top: 130px;
+	}	
+	@include mq_2(x-small) {
+		padding-top: 140px;
+	}	
+	@include mq_2(small) {
+		padding-top: 150px;
 	}	
 	@include mq_2(medium-2) {
 		padding-top: 167px;
