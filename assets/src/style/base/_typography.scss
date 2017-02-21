@@ -68,7 +68,7 @@ $main-heading: (
 $sub-heading: (
     null  : 17,
     xx-small:20,
-    x-small: 24,
+    x-small: 23,
     small : 36,
     medium : 38,
     medium_2: 40,
@@ -79,7 +79,7 @@ $sub-heading: (
 $section-heading: (
     null  : 21,
     xx-small: 25,
-    x-small: 27,
+    x-small: 29,
     small : 29,
     medium : 33,
     medium_2: 40,
@@ -89,10 +89,11 @@ $section-heading: (
 );
 $article-heading: (
     null  : 18,
-    x-small: 21,
+    xx-small: 18,
+    x-small: 22,
     small : 21,
     medium : 23,
-    medium_2: 23,
+    medium-2: 23,
     large: 24,
     x-large: 30,
     xx-large: 30 
