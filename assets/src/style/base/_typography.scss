@@ -169,11 +169,13 @@ $form-text:(
 .article-works-heading{
      @include font-size($article-works-heading);
      text-transform: uppercase;
+     text-align: center;
 } 
 
 /*paragraphs*/
 p{
     @include font-size($p-text);
+    text-align: center;
 }
 .section-desc{
      @include font-size($section-desc);

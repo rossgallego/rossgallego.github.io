@@ -1,29 +1,18 @@
-/* maps and brealpoint */
-$breakpoints: (
-  null: 0,
-  x-small: 544px,
-  small : 740px,
-  medium: 800px,
-  large : 1024px,
-  xlarge: 1400px
-
-);
-/* example usage inline
-.main {
-  width: 100%;
-  @include mq(medium) {
-    width: 60%;
-  }
-  @include mq(large) {
-    width: 70%;
-  }
-}
-*/
-
 .service-provide{
+  height: 150px;
 	margin-top: 30px;
 	text-align: center;
-	img{
-		width: 200px;
-	}
+  background-position: center !important; 
+  background-repeat: no-repeat !important;
+}
+
+.service-design{
+  background: url("service-icon-design.svg");
+}
+.service-dev{
+  background: url("service-icon-dev.svg");
+}
+
+.service-cms{
+  background: url("service-icon-cms.svg");
 }
