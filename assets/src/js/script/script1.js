@@ -163,6 +163,16 @@ skillPrep();
 skillGraphic();
 });
 
+// services
+$(".service-design").appear(function(){
+  $(this).addClass("service-provide__hatch")
+})
+$(".service-dev").appear(function(){
+  $(this).addClass("service-provide__hatch")
+})
+$(".service-cms").appear(function(){
+  $(this).addClass("service-provide__hatch")
+})
     // skillLayout();
     // skillJs();
     // skillWp();

@@ -46,11 +46,25 @@
         @extend .button
     }
     &-piece{
-      background-size: cover !important;
-      background-position: center !important; 
-      background-repeat: no-repeat !important;
-      filter: grayscale(1);
-      height: 227px;
+        background-size: cover !important;
+        background-position: 0 0 !important;
+        background-repeat: no-repeat !important;
+        filter: grayscale(1);
+        height: 162px;
+
+        @include mq_2(x-small) {
+            height:260px
+        }
+
+        @include mq_2(medium) {
+            height:232px
+        }
+        @include mq_2(medium-2) {
+            height:287px
+        }
+        @include mq_2(large) {
+            height:227px
+        }
     }
     &-cdr{
       background: url("27eb9281.cafe.jpg");
