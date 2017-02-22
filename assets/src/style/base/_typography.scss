@@ -1,4 +1,3 @@
-
 /*start mixin*/
 /* breakpoints */
 $breakpoints: (
@@ -55,8 +54,8 @@ name as the key, and the mixin will do the work for you:
 
 /*headings*/
 $main-heading: (
-    null  : 29,
-    xx-small:34,
+    null  : 23,
+    xx-small:30,
     x-small: 37,
     small : (48,1.4),
     medium : 51,
@@ -197,7 +196,19 @@ p{
      @include font-size($nav-list--link);
      text-transform: uppercase;
 }
-
+.nav-responsive-list--link{
+    font-size: em(29);
+    text-transform: uppercase;
+    @include mq_2(x-small){
+        font-size: em(36);
+    }
+}
+.nav-responsive-open{
+    font-size:em(30);
+}
+.nav-responsive-close{
+    font-size:em(40);
+}
 /*misc*/
 input, select, textarea{
      @include font-size($form-text);     

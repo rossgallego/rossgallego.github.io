@@ -1,8 +1,8 @@
 .service-provide{
-  height: 150px;
-	margin-top: 30px;
+  height: 130px;
+	/*margin-top: 30px;*/
 	text-align: center;
-  background-position: center !important; 
+  background-position: top center !important; 
   background-repeat: no-repeat !important;
     
 }
@@ -11,18 +11,9 @@
 }
 .service-provide__hatch{
   animation-name: hatch;
-  -webkit-animation-name: hatch;  
-
   animation-duration: 2s; 
-  -webkit-animation-duration: 2s;
-
   animation-timing-function: ease-in-out; 
-  -webkit-animation-timing-function: ease-in-out;
-
   transform-origin: 50% 100%;
-  -ms-transform-origin: 50% 100%;
-  -webkit-transform-origin: 50% 100%; 
-
   visibility: visible !important;   
 }
 
@@ -49,9 +40,6 @@
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
-
-
 
 @keyframes hatch {
   0% {

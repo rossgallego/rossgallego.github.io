@@ -1,53 +1,7 @@
-.main-nav{
-    background: transparent;
-	left: 0;
-	margin:0;
-	padding: 25px 0 20px 0;
-	position: fixed;
-	right: 0;
-	top:0;
-	z-index: 1030;
-	@include mq_2(medium) {
-		display: block
-	}
-};
-.main-nav--light{
-    background: rgba(26, 26, 26, 0.4);
-}
-.main-nav--dark{
-    background: rgba(26, 26, 26, 0.8);
-}
-.nav-lists{
-	display: none;
-	@include mq_2(medium) {
-		display: block
-	}
-}
-.nav-list{
-	display: block;
-	float: right;
-	margin:0;
-	padding: 0;
-	&--link{
-		display: block;
-		padding: 18px 20px 0 20px;
-	}
-}
-
-/*$breakpoints_2: (
-  null: 0,
-  x-small: 400px,
-  small: 640px,
-  medium:800,
-  medium_2: 900px,
-  large : 1280px,
-  x-large: 1600px,
-  xx-large:2000px
-);*/
 .logo{
-	background: url("rg-logo.svg") no-repeat;
+    background: url("rg-logo.svg") no-repeat;
     background-size: 100% 100%;
-    width: 260px;
+    width: 200px;
     height: 50px;
     @include mq_2(xx-small) {
         width: 300px;
@@ -71,76 +25,91 @@
         width: 380px;
     }
 }
-.nav-responsive{
-	display: block;
-	color: $light-color;
-	float: right;
+/*nav*/
+.main-nav{
+    background: transparent;
+	left: 0;
+	margin:0;
+	padding: 25px 0 20px 0;
+	position: fixed;
+	right: 0;
+	top:0;
+	z-index: 1030;
+};
+.main-nav--light{
+    background: $grey-opacity;
+}
+.main-nav--dark{
+    background: $dark-grey-opacity;
+}
+.nav-lists{
+	display: none;
 	@include mq_2(medium) {
-		display: none
+		display: block
 	}
 }
-
-
-
-
+.nav-list{
+	display: block;
+	float: right;
+	margin:0;
+	padding: 0;
+	&--link{
+		display: block;
+		padding: 18px 20px 0 20px;
+	}
+}
 /* responsive */
-
-
-/* The Overlay (background) */
-.overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+.nav-responsive-open{
+    display: block;
+    float: right;
+    cursor:pointer;
+    @include mq_2(medium) {
+        display: none
+    }
+}
+.nav-responsive-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    z-index: 9999;
+    cursor:pointer; 
+    @include mq_2(x-small){
+        top: 20px;
+        right: 45px;
+    }
+}
+.nav-responsive {
     height: 100%;
     width: 0;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    position: fixed; 
+    z-index: 1; 
     left: 0;
     top: 0;
-    background-color: rgb(0,0,0); /* Black fallback color */
-    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    background-color: $dark-opacity;
     overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    transition: 0.5s; 
     z-index: 9998
 }
-
-/* Position the content inside the overlay */
-.overlay-content {
+.nav-responsive-full{
+    width: 100%
+}
+.nav-responsive-zero{
+    width: 0%
+}
+.nav-responsive-lists {
     position: relative;
     top: 25%; /* 25% from the top */
     width: 100%; /* 100% width */
     text-align: center; /* Centered text/links */
     margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
+.nav-responsive-list{
 
-/* The navigation links inside the overlay */
-.overlay a {
+}
+.nav-responsive-list--link {
     padding: 8px;
     text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block; /* Display block instead of inline */
-    transition: 0.3s; /* Transition effects on hover (color) */
-}
+    display: block; 
+    transition: 0.3s; 
 
-/* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-}
-
-/* Position the close button (top right corner) */
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-    z-index: 9999
-}
-
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
 }

@@ -1,1 +1,5 @@
-module.exports="it works 2";
+
+
+module.exports=  function(){
+	alert("testing")
+}

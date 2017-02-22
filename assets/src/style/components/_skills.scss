@@ -1,9 +1,9 @@
 
 .section-skills{}
 .skill{
-    margin: 15px auto;
-    @include mq_2(x-large) {
-      margin: 30px auto;
+    margin: 0 auto 30px auto;
+    @include mq_2(x-small) {
+      margin: 0 auto 60px auto;
     } 
     &-trade{
         display: block;
@@ -14,9 +14,6 @@
     }
 
 }
-
-
-
 .skill-trade canvas {
     max-height: 100%;
     max-width: 100%;

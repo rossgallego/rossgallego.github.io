@@ -4,6 +4,9 @@ require("../../style/main.scss");
 require('jquery.appear');
 require('jquery-circle-progress');
 
+
+// var test = require('./script2');
+// test();
 //alert(m);
 
 const mm = "it works";
@@ -50,7 +53,7 @@ module.exports= mm;
 
 
 // nav links scroll	
-   $(".nav-list--link").on("click", function(){
+   $(".nav-list--link,.nav-responsive-list--link").on("click", function(){
         var thislink = "#" + $(this).attr("title");
         $("body,html").animate({"scrollTop":$(thislink).offset().top},1000);
         return false;
@@ -190,23 +193,23 @@ $(".service-cms").appear(function(){
 
 
 // nav mobile
-$(".nav-responsive").on("click",function(){
-    openNav()
+$(".nav-responsive-open").on("click",function(){
+    openResponsiveNav()
 })
 
-$(".closebtn,.nav-list-mob").on("click",function(){
-    closeNav()
+$(".nav-responsive-close,.nav-responsive-list--link").on("click",function(){
+    closeResponsiveNav()
 })
 
 /* Open when someone clicks on the span element */
-function openNav() {
+function openResponsiveNav() {
     // document.getElementById("myNav").style.width = "100%";
-    $("#myNav").css("width","100%")
+    $(".nav-responsive").removeClass("nav-responsive-zero").addClass("nav-responsive-full")
 }
 /* Close when someone clicks on the "x" symbol inside the overlay */
-function closeNav() {
+function closeResponsiveNav() {
     // document.getElementById("myNav").style.width = "0%";
-    $("#myNav").css("width","0%")
+    $(".nav-responsive").removeClass("nav-responsive-full").addClass("nav-responsive-zero")
 }
 
 

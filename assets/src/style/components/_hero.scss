@@ -2,7 +2,6 @@
 	padding: 0;
 	overflow: hidden;
 }
-
 .hero-bg{
 	background: url("rg-hero-bg-400.jpg");
 	background-size: cover !important;
@@ -26,19 +25,17 @@
     }
     
 }
-
-
 .main-heading{
 	padding-bottom: 30px;
 	padding-top: 120px;
 	@include mq_2(xx-small) {
-		padding-top: 160px;
+		padding-top: 130px;
 	}	
 	@include mq_2(x-small) {
-		padding-top: 180px;
+		padding-top: 170px;
 	}	
 	@include mq_2(small) {
-		padding-top: 220px;
+		padding-top: 210px;
 		padding-bottom: 40px;
 	}	
 	@include mq_2(medium) {

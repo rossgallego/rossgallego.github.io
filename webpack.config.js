@@ -14,15 +14,12 @@ module.exports = {
 	},
 
 
-
-
-
-plugins: [
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery:"jquery"
-        })
-],
+	plugins: [
+	        new webpack.ProvidePlugin({
+	            $: "jquery",
+	            jQuery:"jquery"
+	        })
+	],
 
 	module:{
 		loaders:[ // array of leoaders
@@ -40,16 +37,16 @@ plugins: [
 				loaders: "style-loader!css-loader!sass-loader"
 			},
 
-//{ test: /\.jpg$/,    loader: "file-loader" },
+			//{ test: /\.jpg$/,    loader: "file-loader" },
 
- //{ test: /\.jpg$/,    loader: "url-loader?limit=10000&minetype=image/jpg" },
-   //
+			 //{ test: /\.jpg$/,    loader: "url-loader?limit=10000&minetype=image/jpg" },
+			   //
 
-/**/
-{
-  test: /\.(jpe?g|gif|png|svg)$/,
-     loader: 'file-loader?emitFile=false&name=[path][name].[ext]'
-},
+			/**/
+			{
+			  test: /\.(jpe?g|gif|png|svg)$/,
+			     loader: 'file-loader?emitFile=false&name=[path][name].[ext]'
+			},
 
 
 
@@ -57,11 +54,10 @@ plugins: [
 
 		]
 	},
-	devServer: {
-		contentBase: __dirname,
-		inline: true
-		//stats: "_errors-only_"
-	},
+	// devServer: {
+	// 	contentBase: __dirname,
+	// 	inline: true
+	// },
 
 
 };

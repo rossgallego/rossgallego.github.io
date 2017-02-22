@@ -66,7 +66,33 @@ a{
 .nav-list--link{
     color: $grey-color
 }
-
+.nav-responsive-list--link{
+    /*color: $light-color;*/
+    color: $light-grey-color;
+    font-weight: bold;
+    &:hover{    
+        color: $light-color;
+    };
+    &:focus{
+        color: $light-color;
+    };
+}
+.nav-responsive-open{
+    color: $light-color;
+}
+.nav-responsive-close{
+    color: $light-color;
+    font-weight: bold
+}
+.contact-btn{
+    color: $dark-color;
+    &:hover{
+        color: $dark-color;
+    }
+    &:focus{
+        color: $dark-color;
+    };
+}
 /*misc*/
 input, select, textarea{
 	font-family: $open-sans;
