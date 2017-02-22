@@ -105,7 +105,6 @@ $article-works-heading:(
     large: 16
 );
 
-
 /*paragraphs*/
 $p-text: (
     null  : 15,
@@ -148,6 +147,30 @@ $form-text:(
 .main-heading{
 	@include font-size($main-heading);
     text-transform: uppercase;
+    padding-bottom: 30px;
+    padding-top: 120px;
+    @include mq_2(xx-small) {
+        padding-top: 160px;
+    }   
+    @include mq_2(x-small) {
+        padding-top: 180px;
+    }   
+    @include mq_2(small) {
+        padding-top: 220px;
+        padding-bottom: 40px;
+    }   
+    @include mq_2(medium) {
+        padding-top: 230px;
+    }
+    @include mq_2(medium-2) {
+        padding-top: 200px;
+    }   
+    @include mq_2(large) {
+        padding-top: 230px;
+    }   
+    @include mq_2(x-large) {
+        padding-top: 260px;
+    }   
 }
 .sub-heading{
 	@include font-size($sub-heading);

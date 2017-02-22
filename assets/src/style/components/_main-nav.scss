@@ -7,7 +7,7 @@
 	right: 0;
 	top:0;
 	z-index: 1030;
-	@include mq(medium) {
+	@include mq_2(medium) {
 		display: block
 	}
 };
@@ -19,7 +19,7 @@
 }
 .nav-lists{
 	display: none;
-	@include mq(medium) {
+	@include mq_2(medium) {
 		display: block
 	}
 }
@@ -75,7 +75,7 @@
 	display: block;
 	color: $light-color;
 	float: right;
-	@include mq(medium) {
+	@include mq_2(medium) {
 		display: none
 	}
 }

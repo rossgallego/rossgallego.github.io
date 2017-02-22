@@ -83,9 +83,10 @@ $(document).scroll(function() {
 
 var skillLayout = function(){
     $(".skill-layout").circleProgress({
-        value: 0.75,
+        value: 0.85,
     size: 170,
     // size: 1000,
+        startAngle: -8,  
     fill: {
       gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
     },
@@ -95,8 +96,9 @@ var skillLayout = function(){
 };
 var skillJs = function(){
   $(".skill-js").circleProgress({
-      value: 0.75,
+      value: 0.65,
     size: 170,
+        startAngle: -8,  
     fill: {
       gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
     },
@@ -108,6 +110,7 @@ var skillWp = function(){
   $(".skill-wp").circleProgress({
       value: 0.75,
     size: 170,
+        startAngle: -8,  
     fill: {
       gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
     },
@@ -118,8 +121,9 @@ var skillWp = function(){
 }
 var skillVersion = function(){
   $(".skill-version").circleProgress({
-      value: 0.75,
+      value: 0.65,
     size: 170,
+        startAngle: -8,  
     fill: {
       gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
     },
@@ -129,8 +133,9 @@ var skillVersion = function(){
 }
 var skillPrep = function(){
   $(".skill-prep").circleProgress({
-      value: 0.75,
+      value: 0.85,
     size: 170,
+        startAngle: -8,  
     fill: {
       gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
     },
@@ -141,6 +146,7 @@ var skillPrep = function(){
 var skillGraphic = function(){
   $(".skill-graphic").circleProgress({
       value: 0.75,
+    startAngle: -8,  
     size: 170,
     fill: {
       gradient: ["rgb(0,204,255)", "rgb(0,204,255)"]
