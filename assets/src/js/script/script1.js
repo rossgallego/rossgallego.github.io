@@ -38,16 +38,18 @@ module.exports= mm;
 
 
 
-    $(".slideLeft").click(function(){
-        $(".cbp-spmenu-left").toggleClass("cbp-spmenu-open")
-    })
+    // $(".slideLeft").click(function(){
+    //     $(".cbp-spmenu-left").toggleClass("cbp-spmenu-open")
+    // })
 /*
    $("#nav-top").on("click", function(){
         $("html body").animate({"scrollTop":$("#skills").offset().top},1000);
         return false;
    });
    */
-	
+
+
+// nav links scroll	
    $(".nav-list--link").on("click", function(){
         var thislink = "#" + $(this).attr("title");
         $("body,html").animate({"scrollTop":$(thislink).offset().top},1000);
@@ -185,6 +187,27 @@ $(".service-cms").appear(function(){
     // skillVersion();
     // skillPrep();
     // skillGraphic();
+
+
+// nav mobile
+$(".nav-responsive").on("click",function(){
+    openNav()
+})
+
+$(".closebtn,.nav-list-mob").on("click",function(){
+    closeNav()
+})
+
+/* Open when someone clicks on the span element */
+function openNav() {
+    // document.getElementById("myNav").style.width = "100%";
+    $("#myNav").css("width","100%")
+}
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+    // document.getElementById("myNav").style.width = "0%";
+    $("#myNav").css("width","0%")
+}
 
 
 

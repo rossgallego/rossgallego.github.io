@@ -25,13 +25,13 @@
 
 <!-- nav -->
 <div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <span class="closebtn" style="color: #fff; font-size:40px;cursor:pointer; font-weight: bold">&times;</span>
   <div class="overlay-content">
-        <a href="" onclick="closeNav()" class="nav-list--link" title="hero" >Home</a> 
-        <a href="" onclick="closeNav()" class="nav-list--link" title="services" >Services</a> 
-        <a href="" onclick="closeNav()" class="nav-list--link" title="skills" >Skills</a> 
-        <a href="" onclick="closeNav()" class="nav-list--link" title ="works" >Works</a> 
-        <a href="" onclick="closeNav()" class="nav-list--link" title="contact">Contact</a> 
+        <a href=""  class="nav-list--link nav-list-mob" title="hero" >Home</a> 
+        <a href=""  class="nav-list--link nav-list-mob" title="services" >Services</a> 
+        <a href=""  class="nav-list--link nav-list-mob" title="skills" >Skills</a> 
+        <a href=""  class="nav-list--link nav-list-mob" title ="works" >Works</a> 
+        <a href=""  class="nav-list--link nav-list-mob" title="contact">Contact</a> 
   </div>
 </div>
 <nav class="main-nav main-nav--light">
@@ -62,7 +62,7 @@
             </li>
             </ul>
 
-            <span class="nav-responsive" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            <span class="nav-responsive" style="font-size:30px;cursor:pointer">&#9776;</span>
         </div> 
     </div>
 </nav>
@@ -365,20 +365,6 @@
   ga('create', 'UA-91928806-1', 'auto');
   ga('send', 'pageview');
 
-</script>
-
-
-
-<script type="text/javascript">
-/* Open when someone clicks on the span element */
-function openNav() {
-    document.getElementById("myNav").style.width = "100%";
-}
-
-/* Close when someone clicks on the "x" symbol inside the overlay */
-function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
-}
 </script>
 
 
