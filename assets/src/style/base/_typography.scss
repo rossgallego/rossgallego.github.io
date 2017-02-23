@@ -209,6 +209,10 @@ p{
 .nav-responsive-close{
     font-size:em(40);
 }
+.contact-btn{
+    text-transform: uppercase; 
+}    
+
 /*misc*/
 input, select, textarea{
      @include font-size($form-text);     

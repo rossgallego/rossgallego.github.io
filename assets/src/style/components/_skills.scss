@@ -28,10 +28,10 @@
     top: 55px;
     width: 90px;
     @include mq_2(large) {
-      top:60px
+      top:50px
     }    
     @include mq_2(x-large) {
-      top:80px
+      top:40px
     }
 }
 
