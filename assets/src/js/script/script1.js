@@ -4,12 +4,14 @@ require("../../style/main.scss");
 require('jquery.appear');
 require('jquery-circle-progress');
 
+// require("font-awesome-webpack");
+require("font-awesome-sass-loader");
 
 // var test = require('./script2');
 // test();
 //alert(m);
 
-const mm = "it works";
+const mm = "it wo55rks";
 module.exports= mm;
 
     $(".work-item").on("tap",function(){
@@ -161,18 +163,6 @@ var skillGraphic = function(){
   });
 }
 
-$('.skill-layout').appear(function() {
-  skillLayout();
-  skillJs();
-});
-$(".skill-wp").appear(function() {
-skillWp();
-skillVersion();
-});
-$(".skill-prep").appear(function() {
-skillPrep();
-skillGraphic();
-});
 
 // services
 $(".service-design").appear(function(){
@@ -184,12 +174,6 @@ $(".service-dev").appear(function(){
 $(".service-cms").appear(function(){
   $(this).addClass("service-provide__hatch")
 })
-    // skillLayout();
-    // skillJs();
-    // skillWp();
-    // skillVersion();
-    // skillPrep();
-    // skillGraphic();
 
 
 // nav mobile
@@ -273,3 +257,16 @@ $(".x").click(function(e){
   spin2(73) 
 })
 */
+
+$('.skill-layout').appear(function() {
+  skillLayout();
+  skillJs();
+});
+$(".skill-wp").appear(function() {
+skillWp();
+skillVersion();
+});
+$(".skill-prep").appear(function() {
+skillPrep();
+skillGraphic();
+});

@@ -1,5 +1,8 @@
+'use strict';
+
 var webpack = require('webpack');
-const path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path');
 
 module.exports = {
 	entry:{
@@ -10,15 +13,21 @@ module.exports = {
 
 	    path: path.resolve(__dirname, "assets/dist/js/script"),
       //  publicPath: "/assets/",
+          // publicPath: 'http://localhost:8080/',
 		filename:"bundle.js"
 	},
 
 
 	plugins: [
-	        new webpack.ProvidePlugin({
-	            $: "jquery",
-	            jQuery:"jquery"
-	        })
+		new webpack.ProvidePlugin({
+			$: "jquery",
+			jQuery:"jquery"
+		}),
+		new HtmlWebpackPlugin({
+			template: './index.html'
+			// ,
+			// inject: 'body'
+		})
 	],
 
 	module:{
@@ -48,7 +57,8 @@ module.exports = {
 			     loader: 'file-loader?emitFile=false&name=[path][name].[ext]'
 			},
 
-
+      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
+      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
 
 
 
@@ -58,6 +68,10 @@ module.exports = {
 	// 	contentBase: __dirname,
 	// 	inline: true
 	// },
+ devServer : {
+    contentBase: './',
+    stats: 'minimal'
+  }
 
 
 };
