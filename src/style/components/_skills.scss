@@ -1,0 +1,38 @@
+
+.section-skills{}
+.skill{
+    margin: 0 auto 30px auto;
+    @include mq_2(x-small) {
+      margin: 0 auto 60px auto;
+    } 
+    &-trade{
+        display: block;
+        text-align: center
+    }
+    &-desp{
+        padding-top: 10px
+    }
+
+}
+.skill-trade canvas {
+    max-height: 100%;
+    max-width: 100%;
+ 	position: relative;
+}
+.skill-desp{
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 55px;
+    width: 90px;
+    @include mq_2(large) {
+      top:50px
+    }    
+    @include mq_2(x-large) {
+      top:40px
+    }
+}
+
+

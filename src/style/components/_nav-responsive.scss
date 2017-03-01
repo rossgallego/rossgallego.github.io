@@ -1,0 +1,55 @@
+/* responsive */
+.nav-responsive-open{
+    display: block;
+    float: right;
+    cursor:pointer;
+    @include mq_2(medium) {
+        display: none
+    }
+}
+.nav-responsive-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    z-index: 9999;
+    cursor:pointer; 
+    @include mq_2(x-small){
+        top: 20px;
+        right: 45px;
+    }
+}
+.nav-responsive {
+    height: 100%;
+    width: 0;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    background-color: $dark-opacity;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; 
+    z-index: 9998
+}
+.nav-responsive-full{
+    width: 100%
+}
+.nav-responsive-zero{
+    width: 0%
+}
+.nav-responsive-lists {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+.nav-responsive-list{
+
+}
+.nav-responsive-list--link {
+    padding: 8px;
+    text-decoration: none;
+    display: block; 
+    transition: 0.3s; 
+
+}

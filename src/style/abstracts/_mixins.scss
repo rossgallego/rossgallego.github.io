@@ -1,0 +1,75 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/* convert pixel to em */
+@function em($pixels, $context: $main-text) {
+  @return #{$pixels/$context}em;
+}
+
+/* break point verison 2 */
+$breakpoints_2: (
+  null: 0,
+  xx-small:350px,
+  x-small: 400px,
+  small: 640px,
+  medium:800px,
+  medium-2: 900px,
+  large : 1280px,
+  x-large: 1600px,
+  xx-large:2000px
+);
+@mixin mq_2($mq-breakpoint_2, $mq-breakpoints_2: $breakpoints_2) {
+  /* If $mq-breakpoint is a key that exists in
+     $mq-breakpoints, get and use the value */
+  @if map-has-key($mq-breakpoints_2, $mq-breakpoint_2) {
+    $mq-breakpoint_2: map-get($mq-breakpoints_2, $mq-breakpoint_2);
+  }
+  @media screen and (min-width: #{$mq-breakpoint_2}) {
+    @content;
+  }
+}
+
+
+
+
+
+
+
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+
+
+
+
+
+

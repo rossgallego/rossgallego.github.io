@@ -1,0 +1,219 @@
+/*start mixin*/
+/* breakpoints */
+$breakpoints: (
+  null: 0,
+  xx-small:350px,
+  x-small: 400px,
+  small: 640px,
+  medium: 800px,
+  medium-2: 900px,
+  large : 1280px,
+  x-large: 1600px,
+  xx-large:2000px
+);
+
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      @include make-font-size($fs-font-size);
+    }
+    @else {
+       /* If $fs-font-size is a key that exists in
+       $fs-breakpoints, use the value */
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        @include make-font-size($fs-font-size);
+      }
+    }
+  }
+}
+/* Utility function for mixin font-size using mixin EM*/
+@mixin make-font-size($fs-font-size) {
+  /* If $fs-font-size is a list, include
+  // both font-size and line-height*/
+  @if type-of($fs-font-size) == "list" {
+    font-size: em(nth($fs-font-size, 1));
+    @if (length($fs-font-size) > 1) {
+      line-height: nth($fs-font-size, 2);
+    }
+  }
+  @else {
+    font-size: em($fs-font-size);
+  }
+}
+/*end mixin*/
+
+
+/*
+Now, what if we want an element to have a font size for a custom breakpoint that doesn’t 
+exist in $breakpoints? In the font-sizes map, simply drop in the breakpoint value instead of a 
+name as the key, and the mixin will do the work for you:
+*/
+
+/*headings*/
+$main-heading: (
+    null  : 23,
+    xx-small:30,
+    x-small: 37,
+    small : (48,1.4),
+    medium : 51,
+    medium-2: 54,
+    large: (56, 1.7),
+    x-large: 60,
+    xx-large: (60,1.7)
+);
+$sub-heading: (
+    null  : 17,
+    xx-small:20,
+    x-small: 22,
+    small : (25,1.6),
+    medium : 27,
+    medium-2: 29,
+    large: 30,
+    x-large: (33,1.7),
+    xx-large: 35 
+);
+$section-heading: (
+    null  : 21,
+    xx-small: 25,
+    x-small: 29,
+    small : 32,
+    medium : 33,
+    medium-2: 34,
+    large: (37, 1.7),
+    x-large: 38,
+    xx-large: (39,1.7) 
+);
+$article-heading: (
+    null  : 14,
+    xx-small: 15,
+    x-small: 15,
+    small : 16,
+    medium : 16,
+    medium-2: 17,
+    large: 18,
+    x-large: 18,
+    xx-large: 19 
+);
+$article-works-heading:(
+    null  : 14,
+    small : 14,
+    medium : 16,
+    large: 16
+);
+
+
+/*paragraphs*/
+$p-text: (
+    null  : 15,
+    xx-small: 16,
+    x-small: 16,
+    small : 16,
+    medium : 16,
+    medium_2: 17,
+    large: 18,
+    x-large: 19,
+    xx-large: 19 
+);
+$section-desc: (
+    null  : 13,
+    xx-small: 16,
+    x-small: 16,
+    small : 20,
+    medium : 19,
+    medium_2: 19,
+    large: (20, 1.7),
+    x-large: 20,
+    xx-large: (20,1.7) 
+);
+/*links*/
+$nav-list--link:(
+    null  : 11,
+    small : 12,
+    medium : 13,
+    large: 16
+);
+/*forms etc */
+$form-text:(
+    null  : 11,
+    small : 12,
+    medium : 13,
+    large: 16
+);
+
+/*headings*/
+.main-heading{
+	@include font-size($main-heading);
+    text-transform: uppercase;
+}
+.sub-heading{
+	@include font-size($sub-heading);
+}
+.section-heading{
+    @include font-size($section-heading);  
+    text-align: center;
+}
+
+.article-heading{
+     @include font-size($article-heading);
+     text-transform: uppercase;  
+     text-align: center;  
+}
+.section-heading-alt{
+    @extend .section-heading;
+    text-transform: uppercase;
+} 
+.article-works-heading{
+     @include font-size($article-works-heading);
+     text-transform: uppercase;
+     text-align: center;
+} 
+
+/*paragraphs*/
+p{
+    @include font-size($p-text);
+    text-align: center;
+}
+.section-desc{
+     @include font-size($section-desc);
+     text-transform: uppercase;
+     text-align: center;
+     &-alt{
+        text-transform: none;
+     }
+}
+.services-desc{
+    text-align: center;
+}
+.skill-desp{
+    
+}
+
+/*links*/
+.nav-list--link{
+     @include font-size($nav-list--link);
+     text-transform: uppercase;
+}
+.nav-responsive-list--link{
+    font-size: em(29);
+    text-transform: uppercase;
+    @include mq_2(x-small){
+        font-size: em(36);
+    }
+}
+.nav-responsive-open{
+    font-size:em(30);
+}
+.nav-responsive-close{
+    font-size:em(40);
+}
+.contact-btn{
+    text-transform: uppercase; 
+}    
+
+/*misc*/
+input, select, textarea{
+     @include font-size($form-text);     
+} 

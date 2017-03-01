@@ -1,0 +1,37 @@
+.contact-form{
+	padding: 0 0 40px 0;
+}
+.contact-input{
+	background: $light-grey-color;
+	border: 0 none;
+	color: $dark-color;
+	padding: 10px 20px;
+	margin-bottom: 10px;
+	width: 100%;
+	&:focus{
+			border: 0 none;
+	};
+}
+.contact-text-area{
+	background: $light-grey-color;
+	border: 0 none;
+	color: $dark-color;
+	padding: 10px 20px;
+	margin-bottom: 10px;
+	width: 100%;
+	&:focus{
+			border: 0 none;
+	};
+}
+.contact-btn{
+	background: $grey-color;
+	border: 0 none;
+	display: block;
+	margin: 0 auto; 
+	padding: 10px 20px;
+	text-align: center;
+	width: 100%;
+	@include mq_2(x-small){
+		width: 50%
+	}
+}
