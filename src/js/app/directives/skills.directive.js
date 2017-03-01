@@ -2,7 +2,7 @@ require('jquery-circle-progress');
 var OnScreen = require('onscreen');
 var skillsTemplate = require('../templates/skills.template.html');
 
-module.exports  = function($document) {
+module.exports  = function() {
 	return {
 		// restrict: 'E',
 		template: skillsTemplate,
@@ -62,13 +62,13 @@ module.exports  = function($document) {
 			        element.entered = true;
 			    }
 			});
-			skillViewPort.on('enter', '.skill-wp', (element) => {
+			skillViewPort2.on('enter', '.skill-wp', (element) => {
 			    if (!element.entered) {
 					skillWp();skillVersion();
 			        element.entered = true;
 			    }
 			});
-			skillViewPort.on('enter', '.skill-prep', (element) => {
+			skillViewPort3.on('enter', '.skill-prep', (element) => {
 			    if (!element.entered) {
 					skillPrep();skillGraphic();
 			        element.entered = true;

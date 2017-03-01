@@ -22,7 +22,7 @@ var app = angular.module('rossApp', []);
 
 
 
-app.directive("linked", function($document) {
+app.directive("linked", function() {
 	return {
 		restrict: 'C',
 		link: function(scope, $elm, attrs) {
