@@ -7,8 +7,6 @@ module.exports  =  function() {
 			$(".work-item").each(function(){   //tagname based selector
 			    var mc = new Hammer(this);
 			    mc.on("tap press", function() {
-			        // console.log(' tap!');
-			        //$(myElement).toggleClass('liked');
 			        return false;
 			    });
 			});

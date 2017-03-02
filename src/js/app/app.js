@@ -1,11 +1,11 @@
 require('angular');
 require('bootstrap-loader');
 require("../../style/main.scss");
-
+require('jquery-circle-progress');
 
 
 import hero from "./directives/hero.directive.js";
-import services from "./directives/services.directive.js";
+import servicesItem from "./directives/services.directive.js";
 import skills from "./directives/skills.directive.js";
 import works from "./directives/works.directive.js";
 import contactform from "./directives/contactform.directive.js";
@@ -14,11 +14,12 @@ import mainnav from "./directives/mainnav.directive.js";
 var app = angular.module('rossApp', []);
 
 	app.directive("hero", hero);
-	app.directive("services", services);
+	app.directive("servicesItem", servicesItem);
 	app.directive("skills", skills);
 	app.directive("works", works);
 	app.directive("contactform", contactform);
 	app.directive("mainnav", mainnav);
+
 
 
 

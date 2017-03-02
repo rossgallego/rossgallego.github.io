@@ -2,13 +2,11 @@ var heroTemplate = require('../templates/hero.template.html');
 
 module.exports  = function(){
 	return{
-		scope:{},
 		template: heroTemplate,
-		link: function(scope, element){
+		link: function(scope, element,attr){
 			$(window).resize(function() {
-			    $(".section-hero").height($(window).height());
+			    $(element).height($(window).height());
 			}).resize();
 		}
 	}
-
 }

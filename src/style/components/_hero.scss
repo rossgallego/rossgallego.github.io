@@ -27,15 +27,15 @@
 }
 .main-heading{
 	padding-bottom: 30px;
-	padding-top: 120px;
+	padding-top: 115px;
 	@include mq_2(xx-small) {
-		padding-top: 130px;
+		padding-top: 115px;
 	}	
 	@include mq_2(x-small) {
-		padding-top: 170px;
+		padding-top: 150px;
 	}	
 	@include mq_2(small) {
-		padding-top: 210px;
+		padding-top: 190px;
 		padding-bottom: 40px;
 	}	
 	@include mq_2(medium) {

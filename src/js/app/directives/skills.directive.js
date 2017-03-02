@@ -74,9 +74,6 @@ module.exports  = function() {
 			        element.entered = true;
 			    }
 			});
-
-
-
 		}
 	}
 };
