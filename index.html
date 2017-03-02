@@ -14,15 +14,18 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <!-- rossApp via Webpack and Angular-->
-        <script type="text/javascript" src="dist/app/bundle.js"></script>
+        <!-- <script type="text/javascript" src="dist/app/bundle.js"></script> -->
             
 </head>
     <body ng-app="rossApp" ng-strict-di>
     <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    
     <!-- nav -->
-    <div mainnav></div>
+    <!-- <div mainnav></div> -->
+    <nav mainnav class="main-nav main-nav--light">
+    </nav>
 
     <!-- hero -->
     <header hero class="section section-hero" id="hero">
@@ -65,8 +68,20 @@
 
     <!-- skills -->
     <div skills></div>
+
     <!-- works -->
-    <div works></div>
+    <section class="section section-works" id="works">
+        <div class="container">
+            <div class="col-sm-8 col-sm-offset-2  col-md-10 col-md-offset-1  col-lg-6 col-lg-offset-3">
+                <h2 class="section-heading-alt">Selected Projects</h2>
+                <p class="section-desc">Here are some of my freelance work wth some of the most creative local agencies in Orange County and Los Angeles</p>
+            </div>
+            <div class="clearfix"></div>             
+            <div ng-controller="worksController">
+                <div ng-repeat="work in works" work="work"></div>
+            </div>
+        </div>
+    </section>
 
     <!-- contact -->
     <div contactform></div>
